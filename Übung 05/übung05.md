@@ -5,10 +5,10 @@
 in der Vorlesung angegeben Klammern einsparen.**
 * (a) $\{w \in \Sigma^* | w \text{ enthaelt geradzahlig viele a}\}$
 
- $(b^* a b^* a b^* ) \cap b^* $
+ $(b^* a b^* a b^* ) b^* $
 * (b) $\{w \in \Sigma^* | \text{ in w gibt es genau ein Vorkommen des Teilwortes aaa}\}$
 
- $(b^* (a^* \cup aaa))^* \cap aaa $
+ $b^* ((aa \cup a)bb^* )^* aaa (bb^* (aa \cup a) )^* b^* $
 
 ---
 ## Aufgabe 2:
@@ -16,9 +16,27 @@ in der Vorlesung angegeben Klammern einsparen.**
 
 ![Automat](Automat2.jpg)
 
+Korrektur: $q_1 \rightarrow q_1$ mit b, $q_5$ kann weg
+
 ---
 ## Aufgabe 3:
 **Beweisen oder widerlegen Sie: $\{www | w \in \{a,b\}^*\}$ ist eine reguläre Sprache.**
+
+Annahme: $L=\{www | w \ in \{a,b\}^* \} \in REG$
+
+Dann gäbe es laut PL für reguläre Sprachen eine Zahl n \in N, so dann sich alle Wörter $w \in L$ mit $|w| \leq n$ in $w=xyz$ zerlegen lassen würden, wobei
+
+* 1) $|xy| \leq n$
+* 2) $y \neq \varepsilon$
+* 3) $\forall i \geq 0: xy^iz \in L$
+
+Wir betrachten nun für gegebenes n das Wort $w=a^nba^nba^nb \in L$
+
+Da $|w|=3n \geq n$, lässt sich w wie oben zerlegen.
+
+* (1) $|w|$ ist höchstens $a^n$
+* (2) $|y|_ a \geq 1$
+* (3) $x=a^k$   $y=a^l | k+l \leq n$
 
 ---
 ## Aufgabe 4:
@@ -28,14 +46,14 @@ in der Vorlesung angegeben Klammern einsparen.**
 ## Aufgabe 5:
 **Welche der folgenden Aussagen sind wahr, welche falsch? Begründen Sie jeweils ihre Antwort!**
 * (a) **Jede Teilmenge einer regulären Sprache ist eine reguläre Sprache.**
- 
- Falsch, $L=\{a,b\}^* \rightarrow L=\{w|w\in \{a,b\}^*\}$
+
+ Falsch, $L=\{a,b\}^* \rightarrow L=\{w|w\in \{a,b\}^* \}$
 * (b) **Falls L eine reguläre Sprache ist, so ist die Sprache $L^R=\{w^R | w \in L\}$ ebenfalls regulär.**
 
  Wahr, Automat von L kann in $L^R$ umgewandelt werden(Anfangszustand = Endzustand , Endzustand = Anfangszustand, Pfeile umkehren für NEA)
 * (c) **Für jede reguläre Sprache L gibt es einen NEA mit genau einem Endzustand.**
 
- Wahr, im NEA werden alle Endzustände zu einem unter Eingabe von Epsilon zu einem Eindzustand geführt. 
+ Wahr, im NEA werden alle Endzustände zu einem unter Eingabe von Epsilon zu einem Eindzustand geführt.
 * (d) **Falls $L \subseteq \Sigma^*$ regulär ist, dann ist auch $\{w | w \in L \land w \in L^R\}$ regulär.**
 
  Wahr, $L^{\cap}=L\cap L^R$

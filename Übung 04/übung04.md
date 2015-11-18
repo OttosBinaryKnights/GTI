@@ -147,25 +147,9 @@ $q_{ij}=(q_i,q_j): $
 
  $L((bab)(a \cup b)^* )$
 
- $= L(bab)L((a \cup b)^* )$
-
- $= \{bab\}(L(a) \cup L(b))^* $
-
- $= \{bab\}(\{a\} \cup \{b\})^* $
-
- $= \{bab\}\{a,b\}^* $
-
 * b) $\{ w \in \Sigma^* | w \text{ enthaelt hoestens zwei a}\}$
 
- $L((b)^* (a) (b)^* (a) (b)^* )$
-
- $= L((b)^* ) L(a) L((b)^* ) L(a) L((b)^* )$
-
- $= L((b)^* ) \{a\} L((b)^* ) \{a\} L((b)^* )$
-
- $= (L(b)^* ) \{a\} (L(b)^* ) \{a\} (L(b)^* )$
-
- $= \{b\}^* \{a\} \{b\}^* \{a\} \{b\}^* $
+ $L(b^* (a \cap b \cap \emptyset^* ) b^* (a \cap b \cap \emptyset^* )b^* )$
 
 ---
 ## Aufgabe 6:
@@ -213,3 +197,29 @@ Wir wählen $$
 ---
 ## Aufgabe 7:
 **Zeigen Sie, dass die Sprache $\{ww^R | w \in \{a,b\}^*\}$ nicht regulär ist.**
+
+Annahme: $L=\{ww^R | w \ in \{a,b\}^* \} \in REG$
+
+Dann gäbe es laut PL für reguläre Sprachen eine Zahl n \in N, so dann sich alle Wörter $w \in L$ mit $|w| \leq n$ in $w=xyz$ zerlegen lassen würden, wobei
+
+* 1) $|xy| \leq n$
+* 2) $y \neq \varepsilon$
+* 3) $\forall i \geq 0: xy^iz \in L$
+
+Wir betrachen nun für gegebenes n das Wort
+$w=a^n bba^n \in L$
+Da $|w|=2n+2 \geq n$, lässt sich w wie oben zerlegen.
+
+Da:
+w=xyz
+(1) $|xy| \leq n \rightarrow x,y$ hat nur a
+(2) $|y| \geq 1 y \in \{a\}^+$
+(3)
+
+haben x,y,z die Form
+$x=a^k | 0\leq k\leq n$
+$y= | 1\leq l \leq n$
+$z=a^{n-k-1}bba^n$
+
+Dann wäre aber für i=0
+$w=xy^iz=xz=a^{n-l)bba^n \notin L$, da
