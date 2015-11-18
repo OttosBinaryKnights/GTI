@@ -10,6 +10,7 @@ in der Vorlesung angegeben Klammern einsparen.**
 
  $b^* ((aa \cup a)bb^* )^* aaa (bb^* (aa \cup a) )^* b^* $
 
+
 ---
 ## Aufgabe 2:
 **Geben Sie einen (nichtdeterministischen) endlichen Automaten, der die Sprache $L(a^*bb^*(a \cup b)ab^*)$ akzeptiert. Zustandsübergangsdiagramm genügt. Dabei ist es hilfreich, dem die Abschlusseigenschaften regulärer Sprachen ausnutzenden Beweis aus der Vorlesung zu folgen, Sie müssen dies aber nicht tun.**
@@ -43,7 +44,16 @@ Da $|w|=3n \geq n$, lässt sich w wie oben zerlegen.
 **Beweisen oder widerlegen Sie: $\{xyx^R | x,y \in \{a,b\}^*\}$ ist eine reguläre Sprache.**
 
 Sprache ist regulär.
-$\{xyx^R | x,y \in \{a,b\}^* \}$ ist die Langform von $L=\{a,b\}^* $
+
+$\{xyx^R | x,y \in \{a,b\}^* \}$ ist die Langform von $L=\{a,b\}^* $, da
+
+$L \subseteq \Sigma^* $
+
+$L = \{xyx^R | x,y \in \Sigma^* \} \supseteq^{x=\epsilon}  \{\epsilon y \epsilon^R | y \in \Sigma^* \} = \{ y: y \in \Sigma^* \} = \Sigma^* $
+
+$\Sigma^* \subseteq L \subseteq \Sigma^* => L = \Sigma^*$
+daher regulär und in einem Automaten abbildbar:
+
 ![Automat](Automat3.jpg)
 
 ---
@@ -52,6 +62,12 @@ $\{xyx^R | x,y \in \{a,b\}^* \}$ ist die Langform von $L=\{a,b\}^* $
 * (a) **Jede Teilmenge einer regulären Sprache ist eine reguläre Sprache.**
 
  Falsch, $L= \Sigma ^* = L(a^* ,b^* ) \rightarrow L=\{w|w\in \{a,b\}^* \}$
+
+ $L_1=\{a,b\}^* $ reguläre Sprache (sh. Aufgabe 4)
+
+ $L_2=\{a^nb^n | n \geq 0\}$ nicht regulär
+
+ aber  $L_2 \subset L_1$ q.e.d.
 
 * (b) **Falls L eine reguläre Sprache ist, so ist die Sprache $L^R=\{w^R | w \in L\}$ ebenfalls regulär.**
 
