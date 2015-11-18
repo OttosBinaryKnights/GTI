@@ -12,7 +12,7 @@ in der Vorlesung angegeben Klammern einsparen.**
 
 ---
 ## Aufgabe 2:
-**Geben Sie einen (nichtdeterministischen) endlichen Automaten, der die Sprache $L(a^*bb^*(a \cap b)ab^*)$ akzeptiert. Zustandsübergangsdiagramm genügt. Dabei ist es hilfreich, dem die Abschlusseigenschaften regulärer Sprachen ausnutzenden Beweis aus der Vorlesung zu folgen, Sie müssen dies aber nicht tun.**
+**Geben Sie einen (nichtdeterministischen) endlichen Automaten, der die Sprache $L(a^*bb^*(a \cup b)ab^*)$ akzeptiert. Zustandsübergangsdiagramm genügt. Dabei ist es hilfreich, dem die Abschlusseigenschaften regulärer Sprachen ausnutzenden Beweis aus der Vorlesung zu folgen, Sie müssen dies aber nicht tun.**
 
 ![Automat](Automat2.jpg)
 
@@ -24,7 +24,7 @@ Korrektur: $q_1 \rightarrow q_1$ mit b, $q_5$ kann weg
 
 Annahme: $L=\{www | w \ in \{a,b\}^* \} \in REG$
 
-Dann gäbe es laut PL für reguläre Sprachen eine Zahl n \in N, so dann sich alle Wörter $w \in L$ mit $|w| \leq n$ in $w=xyz$ zerlegen lassen würden, wobei
+Dann gäbe es laut PL für reguläre Sprachen eine Zahl $n \in N$, so dann sich alle Wörter $w \in L$ mit $|w| \geq n$ in $w=xyz$ zerlegen lassen würden, wobei
 
 * 1) $|xy| \leq n$
 * 2) $y \neq \varepsilon$
@@ -63,7 +63,7 @@ $\{xyx^R | x,y \in \{a,b\}^* \}$ ist die Langform von $L=\{a,b\}^* $
  Wahr, im NEA werden alle Endzustände zu einem unter Eingabe von Epsilon zu einem Eindzustand geführt.
 * (d) **Falls $L \subseteq \Sigma^*$ regulär ist, dann ist auch $\{w | w \in L \land w \in L^R\}$ regulär.**
 
- Wahr, $L^{\cap}=L\cap L^R$
+ Wahr,
  $\{w | w \in L \land w \in L^R\}$
  $L \in REG \Rightarrow L^R \in REG \Rightarrow L \cap L^R \in REG$
 ---
