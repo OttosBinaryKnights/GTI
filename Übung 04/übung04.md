@@ -194,7 +194,7 @@ Es wäre nach dem Lemma das Wort aaaabb möglich, nach der Spreche jedoch nicht.
 Beweis durch Widerspruch (ein Wort wählen)
 
 Ang.: $L$ wäre regulär.
-Wir wählen $$
+Wir wählen $$ $$
 
 
 ---
@@ -203,7 +203,7 @@ Wir wählen $$
 
 Annahme: $L=\{ww^R | w \ in \{a,b\}^* \} \in REG$
 
-Dann gäbe es laut PL für reguläre Sprachen eine Zahl n \in N, so dann sich alle Wörter $w \in L$ mit $|w| \leq n$ in $w=xyz$ zerlegen lassen würden, wobei
+Dann gäbe es laut PL für reguläre Sprachen eine Zahl $n \in N$, so dann sich alle Wörter $w \in L$ mit $|w| \leq n$ in $w=xyz$ zerlegen lassen würden, wobei
 
 * 1) $|xy| \leq n$
 * 2) $y \neq \varepsilon$
@@ -224,5 +224,6 @@ $x=a^k | 0\leq k\leq n$
 $y= | 1\leq l \leq n$
 $z=a^{n-k-1}bba^n$
 
-Dann wäre aber für i=0
-$w=xy^iz=xz=a^{n-l)bba^n \notin L$, da
+Dann wäre aber für $i=0$
+
+$w = xy^iz = xz=a^{n-l)bba^n \notin L$, da
