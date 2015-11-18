@@ -151,6 +151,9 @@ $q_{ij}=(q_i,q_j): $
 
  $L(b^* (a \cap b \cap \emptyset^* ) b^* (a \cap b \cap \emptyset^* )b^* )$
 
+ das ist auf jedenfall richtig:
+ $b^* (a \cup b) b^* (a \cup b) b^* \cup b^*$
+
 ---
 ## Aufgabe 6:
 **Zeigen Sie, dass die Sprache $\{a^mb^k | m\leq k\}\subseteq \{a,b\}^*$ nicht regulär ist.**
