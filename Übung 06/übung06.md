@@ -10,8 +10,13 @@ erzeugt arithmetische Ausdrücke in Umgekehrter Polnischer Notation.**
 (d) **Ist die Grammatik G1 eindeutig? Begründen Sie ihre Antwort.**
 
 ## Aufgabe 2:
-**Geben Sie eine kontextfreie Grammatik an, die die Sprache {aibjckdl | i = j und k = l} erzeugt. Aufgabe 3: Sei G3 = ({S,A,B,T},{a,c},R,S) mit
-R={S→AB|BA, A→aA|ac, B→Tc, T →aT |a} Zeigen Sie, dass G3 mehrdeutig ist.**
+**Geben Sie eine kontextfreie Grammatik an, die die Sprache $\{a^ib^jc^kd^l$ | $i = j$ und $k = l$} erzeugt. **
+ $G=(\{S,A,B \}, \{a,b,c,d\}, \{S -> AB, A -> aAb|\epsilon, B -> cBd|\epsilon\},S)$
+
+## Aufgabe 3:
+**Sei $G_3 = (\{S,A,B,T\},{a,c},R,S)$ mit $R=\{S \rightarrow AB|BA, A \rightarrow aA|ac, B \rightarrow Tc, T \rightarrow  aT |a\}$**
+
+**Zeigen Sie, dass $G_3$ mehrdeutig ist.**
 
 ## Aufgabe 4:
 **Konstruieren Sie mit dem Verfahren aus der Vorlesung zur Grammatik G4 = ({A, B, S}, {a, b}, R, S) mit R = {S → aaA, A → BAB | B | ε, B → bb | ε} eine a ̈quivalente Grammatik G in Chomsky Normalform.**
