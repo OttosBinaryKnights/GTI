@@ -5,7 +5,8 @@ erzeugt arithmetische Ausdrücke in Umgekehrter Polnischer Notation.**
 
 (a) **Geben Sie eine Ableitung für das Wort o o o++ an.**
 
-(b) **Geben Sie einen Syntaxbaum für das Wort o o o++o∗o o+∗o+ an. (c) Gehört das Wort o o o o o o o+++∗∗ zu L(G1)?**
+(b) **Geben Sie einen Syntaxbaum für das Wort o o o++o∗o o+∗o+ an.**
+(c) **Gehört das Wort o o o o o o o+++∗∗ zu L(G1)?**
 
 (d) **Ist die Grammatik G1 eindeutig? Begründen Sie ihre Antwort.**
 
@@ -23,7 +24,7 @@ erzeugt arithmetische Ausdrücke in Umgekehrter Polnischer Notation.**
 
 ## Aufgabe 5:
 **Geben Sie für die Sprache
-{w ∈ {a,b}∗ | w hat ungerade La ̈nge und das mittlere Symbol ist ein a}
+{w ∈ {a,b}∗ | w hat ungerade Länge und das mittlere Symbol ist ein a}
 einen Kellerautomaten an, der die Sprache akzeptiert.
 Aufgabe 6: Sei M der durch das folgende Diagramm gegebene Kellerautomat.**
 a/b/ε
