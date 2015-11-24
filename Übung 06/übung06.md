@@ -11,11 +11,8 @@ $\Rightarrow_{G_1} ooE++ \Rightarrow_{G_1} ooo++$
 
 (b) **Geben Sie einen Syntaxbaum für das Wort o o o++o∗o o+∗o+ an.**
 
-<<<<<<< HEAD
 ![Baum](Aufgabe1b.png)
 
-=======
->>>>>>> origin/master
 (c) **Gehört das Wort o o o o o o o+++∗∗ zu L(G1)?**
 
 ![Baum](Aufgabe1c.png)
@@ -26,12 +23,9 @@ $\Rightarrow_{G_1} ooE++ \Rightarrow_{G_1} ooo++$
 
 ---
 ## Aufgabe 2:
-<<<<<<< HEAD
 **Geben Sie eine kontextfreie Grammatik an, die die Sprache $\{a^ib^jc^kd^l$ | $i = j$ und $k = l$} erzeugt.**
-=======
-**Geben Sie eine kontextfreie Grammatik an, die die Sprache $\{a^ib^jc^kd^l$ | $i = j$ und $k = l$} erzeugt. **
+**Geben Sie eine kontextfreie Grammatik an, die die Sprache $\{a^ib^jc^kd^l$ | $i = j$ und $k = l$} erzeugt.**
 
->>>>>>> origin/master
  $G=(\{S,A,B \}, \{a,b,c,d\}, \{S -> AB, A -> aAb|\epsilon, B -> cBd|\epsilon\},S)$
 
  $R=\{S \rightarrow ATBCUD | ATB | CUD , T \rightarrow \varepsilon | ATB, U \rightarrow \varepsilon | CUD,$
@@ -44,13 +38,11 @@ $\Rightarrow_{G_1} ooE++ \Rightarrow_{G_1} ooo++$
 
 **Zeigen Sie, dass $G_3$ mehrdeutig ist.**
 
-<<<<<<< HEAD
 Das Wort acac lässt sich durch mindestens 2 Ableitungen bilden:
 1. $S \Rightarrow_{G_3} AB \Rightarrow_{G_3} ATc \Rightarrow_{G_3} acTc \Rightarrow_{G_3} acac$
 2. $S \Rightarrow_{G_3} BA \Rightarrow_{G_3} Bac \Rightarrow_{G_3} Tcac \Rightarrow_{G_3} acac$
 
 ---
-=======
 
 * Weg 1:
 
@@ -60,7 +52,7 @@ $S \rightarrow_{G3} AB \rightarrow_{G3} ATc \rightarrow_{G3} AcTc \rightarrow_{G
 
 $S \rightarrow_{G3} BA \rightarrow_{G3} TcA \rightarrow_{G3} Tcac \rightarrow_{G3} acac$
 
->>>>>>> origin/master
+---
 ## Aufgabe 4:
 **Konstruieren Sie mit dem Verfahren aus der Vorlesung zur Grammatik G4 = ({A, B, S}, {a, b}, R, S) mit R = {S → aaA, A → BAB | B | ε, B → bb | ε} eine äquivalente Grammatik G in Chomsky Normalform.**
 
@@ -104,7 +96,7 @@ $S \rightarrow_{G3} BA \rightarrow_{G3} TcA \rightarrow_{G3} Tcac \rightarrow_{G
 {w ∈ {a,b}∗ | w hat ungerade Länge und das mittlere Symbol ist ein a}
 einen Kellerautomaten an, der die Sprache akzeptiert.**
 
-<<<<<<< HEAD
+
 ---
 ## Aufgabe 6:
 **Sei M der durch das folgende Diagramm gegebene Kellerautomat.**
@@ -122,7 +114,7 @@ einen Kellerautomaten an, der die Sprache akzeptiert.**
 | $((p,\varepsilon, b),(s,\varepsilon))$ | s |       bb |     baa       |
 |    |                      | s |        b |      aa       |
 |     |                      | s | $\varepsilon$ |  a       |
-=======
+
 ## Aufgabe 6:
 **Sei M der durch das folgende Diagramm gegebene Kellerautomat.**
 a/b/ε
@@ -134,7 +126,6 @@ sp
 a/b/ε a/ε/a
 
 (a) **Geben Sie eine akzeptierende Berechnung für das Wort baabbabb an. **
->>>>>>> origin/master
 
 (b) **Welches ist die von M akzeptierte Sprache L(M)?**
 
