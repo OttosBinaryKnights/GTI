@@ -92,8 +92,7 @@ $S \rightarrow_{G3} BA \rightarrow_{G3} TcA \rightarrow_{G3} Tcac \rightarrow_{G
 
 ---
 ## Aufgabe 5:
-**Geben Sie für die Sprache
-{w ∈ {a,b}∗ | w hat ungerade Länge und das mittlere Symbol ist ein a}
+**Geben Sie für die Sprache $\{w \in \{a,b\}^* | w \text{hat ungerade Laenge und das mittlere Symbol ist ein a} \}$
 einen Kellerautomaten an, der die Sprache akzeptiert.**
 
 
