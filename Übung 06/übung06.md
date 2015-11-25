@@ -15,7 +15,9 @@ $\Rightarrow_{G_1} ooE++ \Rightarrow_{G_1} ooo++$
 
 (c) **Gehört das Wort o o o o o o o+++∗∗ zu L(G1)?**
 
-![Baum](Aufgabe1c.png)
+![Beweis fehlt](Aufgabe1c.png)
+
+*FALSCH: Beweis über Induktion*
 
 (d) **Ist die Grammatik G1 eindeutig? Begründen Sie ihre Antwort.**
 
@@ -67,14 +69,14 @@ Das Wort acac lässt sich durch mindestens verschiedene Anwendung von Regeln bil
  * $A \rightarrow BA | AB | BB | BAB | bb$
  * $B \rightarrow bb$
 
-* Elimination nichtisolirter Terminalsymbole
+* Elimination nichtisolierter Terminalsymbole
  * $S \rightarrow T_aT_aA| T_aT_a$
  * $A \rightarrow BA | AB | BB | BAB | T_bT_b$
  * $B \rightarrow T_bT_b$
  * $T_a \rightarrow a$
  * $T_b \rightarrow b$
 
-* Elimination langer rechter Seiten
+* Elimination langer rechter Seiten (mehr als 2 Nichtterminaler BAB)
 * $S \rightarrow T_aT_aA| T_aT_a$
 * $X \rightarrow T_aA$
 * $A \rightarrow BA | AB | BB | BY | T_bT_b$
