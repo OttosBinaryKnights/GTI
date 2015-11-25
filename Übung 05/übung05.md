@@ -93,18 +93,29 @@ $G=(\{S,B,C\},\{a,b\},\{S \rightarrow aS| B, B \rightarrow bC, C \rightarrow bA,
 **Sei $\Sigma = \{a,b\}$ und sei $G=(V, \Sigma , R, S)$ eine kontextfreie Grammatik, wobei $V=\{S,A,B\}$ und
 $R=\{S \rightarrow aB | bA, A \rightarrow a | aS | BAA, B \rightarrow b | bS | ABB\}$.**
 * (a) **Zeigen Sie, dass ababbaaabb zu L(G) gehört.**
- $S \Rightarrow_G aB \Rightarrow_G abS \Rightarrow_G abaB \Rightarrow_G ababS$
 
- $\Rightarrow_G ababbA \Rightarrow_G ababbaS \Rightarrow_G ababbaaB$
+ $S$
+ $\Rightarrow_G aB$
+ $\Rightarrow_G abS$
+ $\Rightarrow_G abaB$
+ $\Rightarrow_G ababS$
+ $\Rightarrow_G ababbA$
+ $\Rightarrow_G ababbaS$
+ $\Rightarrow_G ababbaaB$
+ $\Rightarrow_G ababbaaABB$
+ $\Rightarrow_G^+ ababbaaabb$
 
- $\Rightarrow_G ababbaaABB \Rightarrow_G ababbaaabb$
-* (b) **Zeigen Sie, dass alle Wörter in L(G) gleichviele a und b enthalten.**
+*Bemerkung: "$\Rightarrow_G^+$" positive Hülle, da mehr als einen Schritt der Relation auf einmal durchgeführt wird !*
+
+* (b) **Zeigen Sie, dass alle Wörter in L(G) gleich viele a und b enthalten.**
 
  Die Aussage ist richtig, kann es aber nicht vollständig beweisen.
  ![Beweis](Beweis.jpg)
  Brauche noch den Beweis von:
 
  $|ABB|_ b=|ABB|_ a-1$ und  $|BAA|_ a = |BAA|_ b-1$
+
+korrekte Lösung im ![zugehörigen Issue](https://github.com/OttosBinaryKnights/GTI/issues/25)
 
 ---
 ## Aufgabe 8:
