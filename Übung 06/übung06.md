@@ -11,7 +11,7 @@ $\Rightarrow_{G_1} ooE++ \Rightarrow_{G_1} ooo++$
 
 (b) **Geben Sie einen Syntaxbaum für das Wort o o o++o∗o o+∗o+ an.**
 
-![Baum](Aufgabe1b.png)
+![Baum](Aufgabe1b.svg)
 
 (c) **Gehört das Wort o o o o o o o+++∗∗ zu L(G1)?**
 
