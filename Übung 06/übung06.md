@@ -51,7 +51,7 @@ $E \Rightarrow_{G_1} EE* \Rightarrow_{G_1} EE* \Rightarrow_{G_1} EEE+* \Rightarr
 
 **Zeigen Sie, dass $G_3$ mehrdeutig ist.**
 
-Das Wort acac lässt sich durch mindestens verschiedene Anwendung von Regeln bilden lässt:
+Das Wort acac lässt sich durch verschiedene Syntaxbäume darstellen:
 1. $S \Rightarrow_{G_3} AB \Rightarrow_{G_3} ATc \Rightarrow_{G_3} acTc \Rightarrow_{G_3} acac$
 2. $S \Rightarrow_{G_3} BA \Rightarrow_{G_3} Bac \Rightarrow_{G_3} Tcac \Rightarrow_{G_3} acac$
 3. $S \Rightarrow_{G3} BA \Rightarrow_{G3} TcA \Rightarrow_{G3} Tcac \Rightarrow_{G3} acac$
