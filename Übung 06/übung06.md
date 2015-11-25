@@ -85,7 +85,7 @@ Das Wort acac lässt sich durch mindestens 2 Ableitungen bilden:
 ## Aufgabe 5:
 **Geben Sie für die Sprache $\{w \in \{a,b\}^* | w \text{hat ungerade Laenge und das mittlere Symbol ist ein a} \}$
 einen Kellerautomaten an, der die Sprache akzeptiert.**
-
+![Automat](Aufgabe5.jpg)
 
 ---
 ## Aufgabe 6:
@@ -95,6 +95,7 @@ einen Kellerautomaten an, der die Sprache akzeptiert.**
 (a) **Geben Sie eine akzeptierende Berechnung für das Wort baabbabb an.**
 
 | $((s,a,b),(s,\varepsilon))$ | s | baabbabb | $\varepsilon$ |
+|:---: |
 | $((s,a,\varepsilon),(s,a))$ | s |  aabbabb |       b       |
 | $((s,b,a),(s,\varepsilon))$ | p |   abbabb |       a       |
 | $((s,b,\varepsilon),(s,b))$ | p |   abbabb |       a       |
