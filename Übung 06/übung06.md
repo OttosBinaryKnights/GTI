@@ -94,30 +94,19 @@ einen Kellerautomaten an, der die Sprache akzeptiert.**
 
 (a) **Geben Sie eine akzeptierende Berechnung für das Wort baabbabb an.**
 
+|| Zustand | Input| Keller|
+|:---: |:---: |:---: |:---: |:---: |
 | $((s,a,b),(s,\varepsilon))$ | s | baabbabb | $\varepsilon$ |
-|:---: |
-| $((s,a,\varepsilon),(s,a))$ | s |  aabbabb |       b       |
-| $((s,b,a),(s,\varepsilon))$ | p |   abbabb |       a       |
+| $((s,a,\varepsilon),(s,a))$ | s |  aabbabb |       b|
+| $((s,b,a),(s,\varepsilon))$ | p |   abbabb | $\varepsilon$       |
 | $((s,b,\varepsilon),(s,b))$ | p |   abbabb |       a       |
 | $((s,a,b),(p,\varepsilon))$ | p |     babb |      aa       |
 | $((s,a,\varepsilon),(p,a))$ | s |     babb |     aaa       |
 | $((p,\varepsilon,\varepsilon),(s,a))$ | s |      abb |      aa       |
 | $((p,\varepsilon, b),(s,\varepsilon))$ | s |       bb |     baa       |
-|    |                      | s |        b |      aa       |
-|     |                      | s | $\varepsilon$ |  a       |
-
-## Aufgabe 6:
-**Sei M der durch das folgende Diagramm gegebene Kellerautomat.**
-a/b/ε
-a/ε/a
-b/a/ε
-￼b/ε/b
-ε/b/ε
-sp
-a/b/ε a/ε/a
-
-(a) **Geben Sie eine akzeptierende Berechnung für das Wort baabbabb an. **
+|        | s |        b |      aa       |
+|        | s | $\varepsilon$ |  a       |
 
 (b) **Welches ist die von M akzeptierte Sprache L(M)?**
 
-ungerade Anzahl an as und bs
+ungerade Anzahl von as & bs
