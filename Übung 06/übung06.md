@@ -104,6 +104,18 @@ Also am Ende:
 einen Kellerautomaten an, der die Sprache akzeptiert.**
 ![Automat](Aufgabe5.jpg)
 
+Berechnung (Zustand, Eingabewort, Keller):
+
+$(q_0, bab, \epsilon)$
+$\vdash_M (q_0, ab, a)$
+$\vdash_M (q_1, b, a)$
+$\vdash_M (q_1, \epsilon, \epsilon)$
+
+Werte die auf den Stack kommen dürfen müsen im Stapelalphabet definiert werden.
+
+*Aus Vorlesung:*
+jede kontextfreie Sprache lässt sich durch einen Automaten mit nur zwei Zuständen umsetzen.
+
 ---
 ## Aufgabe 6:
 **Sei M der durch das folgende Diagramm gegebene Kellerautomat.**
@@ -111,21 +123,41 @@ einen Kellerautomaten an, der die Sprache akzeptiert.**
 
 (a) **Geben Sie eine akzeptierende Berechnung für das Wort baabbabb an.**
 
+* $((s,a,b),(s,\varepsilon))$
+* $((s,a,\varepsilon),(s,a))$
+* $((s,b,a),(s,\varepsilon))$
+* $((s,b,\varepsilon),(s,b))$
+* $((s,a,b),(p,\varepsilon))$
+* $((s,a,\varepsilon),(p,a))$
+* $((p,\varepsilon,\varepsilon),(s,a))$
+* $((p,\varepsilon, b),(s,\varepsilon))$
+
+Bitte noch vervollständigen:
+
+$(s,baabbabb, \epsilon)$
+$\vdash_M (s, aabbabb, b)$
+$\vdash_M (p, abbabb, \epsilon)$
+$\vdash_M (s, abbabb, a)$
+$\vdash_M (s, bbabb, aa)$
+$\vdash_M (s, babb, aaa)$
+
 || Zustand | Input| Keller|
 |:---: |:---: |:---: |:---: |:---: |
-| $((s,a,b),(s,\varepsilon))$ | s | baabbabb | $\varepsilon$ |
-| $((s,a,\varepsilon),(s,a))$ | s |  aabbabb |       b|
-| $((s,b,a),(s,\varepsilon))$ | p |   abbabb | $\varepsilon$       |
-| $((s,b,\varepsilon),(s,b))$ | p |   abbabb |       a       |
-| $((s,a,b),(p,\varepsilon))$ | p |     babb |      aa       |
-| $((s,a,\varepsilon),(p,a))$ | s |     babb |     aaa       |
-| $((p,\varepsilon,\varepsilon),(s,a))$ | s |      abb |      aa       |
-| $((p,\varepsilon, b),(s,\varepsilon))$ | s |       bb |     baa       |
+| | s | baabbabb | $\varepsilon$ |
+|  | s |  aabbabb |       b|
+|  | p |   abbabb | $\varepsilon$       |
+|  | p |   abbabb |       a       |
+|  | p |    bbabb |      aa       |
+|  | s |     babb |     aaa       |
+|  | s |      abb |      aa       |
+|  | s |       bb |     baa       |
 |        | s |        b |      aa       |
 |        | s | $\varepsilon$ |  a       |
 
 (b) **Welches ist die von M akzeptierte Sprache L(M)?**
 
-ungerade Anzahl von as & bs
+Wenn man in s bliebt: $|w|_a = |w|_b$
 
-$L(M)=\{w \in \{a,b\}^* | |w|_a \leq |w|_b \}$
+Reise zu p: $|w|_a = |w|_b$
+
+$L(M)=\{w \in \{a,b\}^* | 1*|w|_a \leq |w|_b \leq 2*|w|_a \}$
