@@ -41,16 +41,7 @@ $\Rightarrow_{G_1} ooE++ \Rightarrow_{G_1} ooo++$
 Das Wort acac lässt sich durch mindestens 2 Ableitungen bilden:
 1. $S \Rightarrow_{G_3} AB \Rightarrow_{G_3} ATc \Rightarrow_{G_3} acTc \Rightarrow_{G_3} acac$
 2. $S \Rightarrow_{G_3} BA \Rightarrow_{G_3} Bac \Rightarrow_{G_3} Tcac \Rightarrow_{G_3} acac$
-
----
-
-* Weg 1:
-
-$S \rightarrow_{G3} AB \rightarrow_{G3} ATc \rightarrow_{G3} AcTc \rightarrow_{G3} acac$
-
-* Weg 2:
-
-$S \rightarrow_{G3} BA \rightarrow_{G3} TcA \rightarrow_{G3} Tcac \rightarrow_{G3} acac$
+3. $S \Rightarrow_{G3} BA \Rightarrow_{G3} TcA \Rightarrow_{G3} Tcac \Rightarrow_{G3} acac$
 
 ---
 ## Aufgabe 4:
