@@ -19,6 +19,8 @@ $\Rightarrow_{G_1} ooE++ \Rightarrow_{G_1} ooo++$
 
 *FALSCH: Beweis über Induktion*
 
+*Ansatz: immer ein o mehr als Operatoren*
+
 (d) **Ist die Grammatik G1 eindeutig? Begründen Sie ihre Antwort.**
 
 nein, für das Wort $oo*oo+*$ gibt es zwei Bäume/Grammatiken:
@@ -26,6 +28,13 @@ nein, für das Wort $oo*oo+*$ gibt es zwei Bäume/Grammatiken:
 $E  \Rightarrow_{G_1} EE* \Rightarrow_{G_1} EE*E* \Rightarrow_{G_1} EE*EE+* \Rightarrow_{G_1} oo*oo+*$
 
 $E \Rightarrow_{G_1} EE* \Rightarrow_{G_1} EE* \Rightarrow_{G_1} EEE+* \Rightarrow_{G_1} EE*EE+* \Rightarrow_{G_1} oo*oo+*$
+
+---
+*verschiedene Ableitungen können den gleichen Syntaxbaum haben.*
+
+*Ansatz: gnd. wenn eine eindeutige Rechtsableitung existiert*
+
+*Beweis: Grammatik ist eindeutig rechtsableitung, daher ist sie eindeutig*
 
 ---
 ## Aufgabe 2:
@@ -115,3 +124,5 @@ einen Kellerautomaten an, der die Sprache akzeptiert.**
 (b) **Welches ist die von M akzeptierte Sprache L(M)?**
 
 ungerade Anzahl von as & bs
+
+$L(M)=\{w \in \{a,b\}^* | |w|_a \leq |w|_b \}$
