@@ -28,9 +28,7 @@ $\Rightarrow_{G_1} ooE++ \Rightarrow_{G_1} ooo++$
 
  $G=(\{S,A,B \}, \{a,b,c,d\}, \{S -> AB, A -> aAb|\epsilon, B -> cBd|\epsilon\},S)$
 
- $R=\{S \rightarrow ATBCUD | ATB | CUD , T \rightarrow \varepsilon | ATB, U \rightarrow \varepsilon | CUD,$
-
-  $A\rightarrow a, B\rightarrow b, C\rightarrow c, D\rightarrow d\}$
+ $R=\{S \rightarrow AB, A \rightarrow aAb| \varepsilon, B \varepsilon cBd | \varepsilon \}$
 
 ---
 ## Aufgabe 3:
@@ -38,7 +36,7 @@ $\Rightarrow_{G_1} ooE++ \Rightarrow_{G_1} ooo++$
 
 **Zeigen Sie, dass $G_3$ mehrdeutig ist.**
 
-Das Wort acac lässt sich durch mindestens 2 Ableitungen bilden:
+Das Wort acac lässt sich durch mindestens verschiedene Anwendung von Regeln bilden lässt:
 1. $S \Rightarrow_{G_3} AB \Rightarrow_{G_3} ATc \Rightarrow_{G_3} acTc \Rightarrow_{G_3} acac$
 2. $S \Rightarrow_{G_3} BA \Rightarrow_{G_3} Bac \Rightarrow_{G_3} Tcac \Rightarrow_{G_3} acac$
 3. $S \Rightarrow_{G3} BA \Rightarrow_{G3} TcA \Rightarrow_{G3} Tcac \Rightarrow_{G3} acac$
@@ -54,32 +52,33 @@ Das Wort acac lässt sich durch mindestens 2 Ableitungen bilden:
 
 * Elimination von $\varepsilon$-Regeln:
  * $S \rightarrow aaA | aa$
- * $A \rightarrow BAB | B | BB | BA | AB$
- * $B \rightarrow bb | b$
+ * $A \rightarrow BAB | B | BB | BA | AB | A$
+ * $B \rightarrow bb$
+
+* Elimination von Kettenregelzyklen
+ * $A \rightarrow A$ fällt weg
 
 * Elimination von Kettenregeln
  * $S \rightarrow aaA | aa$
- * $A \rightarrow bbAbb | bb | bbbb | bbA | bA | Ab | bAbb$
- * $B \rightarrow bb | b$
+ * $A \rightarrow BA | AB | BB | BAB | bb$
+ * $B \rightarrow bb$
 
 * Elimination nichtisolirter Terminalsymbole
- * $S \rightarrow T_aT_aA | T_aT_a$
- * $A \rightarrow T_bT_bAT_bT_b |T_bT_b|T_bT_bT_bT_b|T_bT_bA|AT_bT_b|T_bAT_b| b| T_bA|AT_b | T_bAT_bT_b| T_bT_bAT_b|T_bT_bT_b$
- * $B \rightarrow T_bT_b|b$
+ * $S \rightarrow T_aT_aA| T_aT_a$
+ * $A \rightarrow BA | AB | BB | BAB | T_bT_b$
+ * $B \rightarrow T_bT_b$
  * $T_a \rightarrow a$
  * $T_b \rightarrow b$
 
 * Elimination langer rechter Seiten
- * $S \rightarrow S_1A | S_1$
- * $A \rightarrow S_2T_bT_b | S_3 | S_3S_3 | S_2 | S_4 | T_bS_5 | b | T_bA | S_5 | T_bS_4 | S_2T_b | S_3T_b$
- * $B \rightarrow S_3 | b$
- * $S_1 \rightarrow T_aT_a$
- * $S_2 \rightarrow T_bT_bA$
- * $S_3 \rightarrow T_bT_b$
- * $S_4 \rightarrow AT_bT_b$
- * $S_5 \rightarrow A T_b$
- * $T_a \rightarrow a$
- * $T_b \rightarrow b$
+* $S \rightarrow T_aT_aA| T_aT_a$
+* $X \rightarrow T_aA$
+* $A \rightarrow BA | AB | BB | BY | T_bT_b$
+* $Y \rightarrow AB$
+* $B \rightarrow T_bT_b$
+* $T_a \rightarrow a$
+* $T_b \rightarrow b$
+
 
 ---
 ## Aufgabe 5:
