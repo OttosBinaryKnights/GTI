@@ -1,6 +1,6 @@
 # Übung 6
 ## Aufgabe 1:
-**Die kontextfreie Grammatik $G_1 = (V,\Sigma,R,E)$ mit $V = \{E\}$, $\Sigma = \{o, +, \times \}$ und $R = \{E \rightarrow E E + | E E \times | o\}$
+**Die kontextfreie Grammatik $G_1 = (V,\Sigma,R,E)$ mit $V = \{E\}$, $\Sigma = \{o, +, * \}$ und $R = \{E \rightarrow E E + | E E * | o\}$
 erzeugt arithmetische Ausdrücke in Umgekehrter Polnischer Notation.**
 
 (a) **Geben Sie eine Ableitung für das Wort o o o++ an.**
@@ -19,7 +19,11 @@ $\Rightarrow_{G_1} ooE++ \Rightarrow_{G_1} ooo++$
 
 (d) **Ist die Grammatik G1 eindeutig? Begründen Sie ihre Antwort.**
 
-![Baum](Aufgabe1d.png)
+nein, für das Wort $oo*oo+*$ gibt es zwei Bäume/Grammatiken:
+
+$E  \Rightarrow_{G_1} EE* \Rightarrow_{G_1} EE*E* \Rightarrow_{G_1} EE*EE+* \Rightarrow_{G_1} oo*oo+*$
+
+$E \Rightarrow_{G_1} EE* \Rightarrow_{G_1} EE* \Rightarrow_{G_1} EEE+* \Rightarrow_{G_1} EE*EE+* \Rightarrow_{G_1} oo*oo+*$
 
 ---
 ## Aufgabe 2:
