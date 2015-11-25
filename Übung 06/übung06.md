@@ -94,6 +94,9 @@ Das Wort acac lässt sich durch verschiedene Syntaxbäume darstellen:
 * $T_a \rightarrow a$
 * $T_b \rightarrow b$
 
+Also am Ende:
+* zwei Nichtterminale Symbole
+* ein Terminales Symbol
 
 ---
 ## Aufgabe 5:
