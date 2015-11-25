@@ -115,7 +115,7 @@ $R=\{S \rightarrow aB | bA, A \rightarrow a | aS | BAA, B \rightarrow b | bS | A
 
  $|ABB|_ b=|ABB|_ a-1$ und  $|BAA|_ a = |BAA|_ b-1$
 
-korrekte Lösung im ![zugehörigen Issue](https://github.com/OttosBinaryKnights/GTI/issues/25)
+*korrekte Lösung im [zugehörigen Issue #25](https://github.com/OttosBinaryKnights/GTI/issues/25)*
 
 ---
 ## Aufgabe 8:
