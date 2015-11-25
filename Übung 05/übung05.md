@@ -86,7 +86,7 @@ daher regulär und in einem Automaten abbildbar:
 ## Aufgabe 6:
 **Geben Sie eine rechtslineare Grammatik an, die die Sprache $L(a^*bba^*)$ erzeugt.**
 
-$G=(\{S,B,C\},\{a,b\},\{S \rightarrow aS| B, B \rightarrow bC, C \rightarrow bA, A \rightarrow aA|\epsilon \}, S)$
+$G=(\{S,B,C\},\{a,b\},\{S \rightarrow aS| B, B \rightarrow bC, C \rightarrow bA, A \rightarrow A|aA|\epsilon \}, S)$
 
 ---
 ## Aufgabe 7:
@@ -110,4 +110,8 @@ $R=\{S \rightarrow aB | bA, A \rightarrow a | aS | BAA, B \rightarrow b | bS | A
 ## Aufgabe 8:
 **Geben Sie eine kontextfreie Grammatik an, die die Sprache $\{aubw | u,w \in \{a,b\} , |u|=|w|\}$ erzeugt.**
 
-$G=(\{S,B,C\},\{a,b\},\{S \rightarrow aB, B \rightarrow aC|bc|b, C \rightarrow aB|bB\}, S)$
+$R=\{S \rightarrow aB, B \rightarrow b|aBa|bBb|aBb|bBa\}$
+
+$V=\{S,B\}$
+
+$\Sigma = \{a,b\}$
