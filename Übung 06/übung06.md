@@ -19,6 +19,8 @@ $\Rightarrow_{G_1} ooE++ \Rightarrow_{G_1} ooo++$
 
 (d) **Ist die Grammatik G1 eindeutig? Begründen Sie ihre Antwort.**
 
+nein, für das Wort $oo*oo+*$ gibt es zwei Bäume:
+
 ![Baum](Aufgabe1d.png)
 
 ---
