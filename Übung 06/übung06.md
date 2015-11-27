@@ -1,6 +1,6 @@
 # Übung 6
 ## Aufgabe 1:
-**Die kontextfreie Grammatik $G_1 = (V,\Sigma,R,E)$ mit $V = \{E\}$, $\Sigma = \{o, +, \times \}$ und $R = \{E \rightarrow E E + | E E \times | o\}$
+**Die kontextfreie Grammatik $G_1 = (V,\Sigma,R,E)$ mit $V = \{E\}$, $\Sigma = \{o, +, * \}$ und $R = \{E \rightarrow E E + | E E * | o\}$
 erzeugt arithmetische Ausdrücke in Umgekehrter Polnischer Notation.**
 
 (a) **Geben Sie eine Ableitung für das Wort o o o++ an.**
@@ -11,17 +11,36 @@ $\Rightarrow_{G_1} ooE++ \Rightarrow_{G_1} ooo++$
 
 (b) **Geben Sie einen Syntaxbaum für das Wort o o o++o∗o o+∗o+ an.**
 
-![Baum](Aufgabe1b.png)
+![Baum](Aufgabe1b.svg)
 
 (c) **Gehört das Wort o o o o o o o+++∗∗ zu L(G1)?**
 
-![Baum](Aufgabe1c.png)
+![Beweis fehlt](Aufgabe1c.png)
+
+*FALSCH: Beweis über Induktion*
+
+*Ansatz: immer ein o mehr als Operatoren*
 
 (d) **Ist die Grammatik G1 eindeutig? Begründen Sie ihre Antwort.**
 
+<<<<<<< HEAD
 nein, für das Wort $oo*oo+*$ gibt es zwei Bäume:
 
 ![Baum](Aufgabe1d.png)
+=======
+nein, für das Wort $oo*oo+*$ gibt es zwei Bäume/Grammatiken:
+
+$E  \Rightarrow_{G_1} EE* \Rightarrow_{G_1} EE*E* \Rightarrow_{G_1} EE*EE+* \Rightarrow_{G_1} oo*oo+*$
+
+$E \Rightarrow_{G_1} EE* \Rightarrow_{G_1} EE* \Rightarrow_{G_1} EEE+* \Rightarrow_{G_1} EE*EE+* \Rightarrow_{G_1} oo*oo+*$
+
+---
+*verschiedene Ableitungen können den gleichen Syntaxbaum haben.*
+
+*Ansatz: gnd. wenn eine eindeutige Rechtsableitung existiert*
+
+*Beweis: Grammatik ist eindeutig rechtsableitung, daher ist sie eindeutig*
+>>>>>>> origin/master
 
 ---
 ## Aufgabe 2:
@@ -38,7 +57,7 @@ nein, für das Wort $oo*oo+*$ gibt es zwei Bäume:
 
 **Zeigen Sie, dass $G_3$ mehrdeutig ist.**
 
-Das Wort acac lässt sich durch mindestens verschiedene Anwendung von Regeln bilden lässt:
+Das Wort acac lässt sich durch verschiedene Syntaxbäume darstellen:
 1. $S \Rightarrow_{G_3} AB \Rightarrow_{G_3} ATc \Rightarrow_{G_3} acTc \Rightarrow_{G_3} acac$
 2. $S \Rightarrow_{G_3} BA \Rightarrow_{G_3} Bac \Rightarrow_{G_3} Tcac \Rightarrow_{G_3} acac$
 3. $S \Rightarrow_{G3} BA \Rightarrow_{G3} TcA \Rightarrow_{G3} Tcac \Rightarrow_{G3} acac$
@@ -65,14 +84,14 @@ Das Wort acac lässt sich durch mindestens verschiedene Anwendung von Regeln bil
  * $A \rightarrow BA | AB | BB | BAB | bb$
  * $B \rightarrow bb$
 
-* Elimination nichtisolirter Terminalsymbole
+* Elimination nichtisolierter Terminalsymbole
  * $S \rightarrow T_aT_aA| T_aT_a$
  * $A \rightarrow BA | AB | BB | BAB | T_bT_b$
  * $B \rightarrow T_bT_b$
  * $T_a \rightarrow a$
  * $T_b \rightarrow b$
 
-* Elimination langer rechter Seiten
+* Elimination langer rechter Seiten (mehr als 2 Nichtterminaler BAB)
 * $S \rightarrow T_aT_aA| T_aT_a$
 * $X \rightarrow T_aA$
 * $A \rightarrow BA | AB | BB | BY | T_bT_b$
@@ -81,12 +100,27 @@ Das Wort acac lässt sich durch mindestens verschiedene Anwendung von Regeln bil
 * $T_a \rightarrow a$
 * $T_b \rightarrow b$
 
+Also am Ende:
+* zwei Nichtterminale Symbole
+* ein Terminales Symbol
 
 ---
 ## Aufgabe 5:
 **Geben Sie für die Sprache $\{w \in \{a,b\}^* | w \text{hat ungerade Laenge und das mittlere Symbol ist ein a} \}$
 einen Kellerautomaten an, der die Sprache akzeptiert.**
 ![Automat](Aufgabe5.jpg)
+
+Berechnung (Zustand, Eingabewort, Keller):
+
+$(q_0, bab, \epsilon)$
+$\vdash_M (q_0, ab, a)$
+$\vdash_M (q_1, b, a)$
+$\vdash_M (q_1, \epsilon, \epsilon)$
+
+Werte die auf den Stack kommen dürfen müsen im Stapelalphabet definiert werden.
+
+*Aus Vorlesung:*
+jede kontextfreie Sprache lässt sich durch einen Automaten mit nur zwei Zuständen umsetzen.
 
 ---
 ## Aufgabe 6:
@@ -95,19 +129,41 @@ einen Kellerautomaten an, der die Sprache akzeptiert.**
 
 (a) **Geben Sie eine akzeptierende Berechnung für das Wort baabbabb an.**
 
+* $((s,a,b),(s,\varepsilon))$
+* $((s,a,\varepsilon),(s,a))$
+* $((s,b,a),(s,\varepsilon))$
+* $((s,b,\varepsilon),(s,b))$
+* $((s,a,b),(p,\varepsilon))$
+* $((s,a,\varepsilon),(p,a))$
+* $((p,\varepsilon,\varepsilon),(s,a))$
+* $((p,\varepsilon, b),(s,\varepsilon))$
+
+Bitte noch vervollständigen:
+
+$(s,baabbabb, \epsilon)$
+$\vdash_M (s, aabbabb, b)$
+$\vdash_M (p, abbabb, \epsilon)$
+$\vdash_M (s, abbabb, a)$
+$\vdash_M (s, bbabb, aa)$
+$\vdash_M (s, babb, aaa)$
+
 || Zustand | Input| Keller|
 |:---: |:---: |:---: |:---: |:---: |
-| $((s,a,b),(s,\varepsilon))$ | s | baabbabb | $\varepsilon$ |
-| $((s,a,\varepsilon),(s,a))$ | s |  aabbabb |       b|
-| $((s,b,a),(s,\varepsilon))$ | p |   abbabb | $\varepsilon$       |
-| $((s,b,\varepsilon),(s,b))$ | p |   abbabb |       a       |
-| $((s,a,b),(p,\varepsilon))$ | p |     babb |      aa       |
-| $((s,a,\varepsilon),(p,a))$ | s |     babb |     aaa       |
-| $((p,\varepsilon,\varepsilon),(s,a))$ | s |      abb |      aa       |
-| $((p,\varepsilon, b),(s,\varepsilon))$ | s |       bb |     baa       |
+| | s | baabbabb | $\varepsilon$ |
+|  | s |  aabbabb |       b|
+|  | p |   abbabb | $\varepsilon$       |
+|  | p |   abbabb |       a       |
+|  | p |    bbabb |      aa       |
+|  | s |     babb |     aaa       |
+|  | s |      abb |      aa       |
+|  | s |       bb |     baa       |
 |        | s |        b |      aa       |
 |        | s | $\varepsilon$ |  a       |
 
 (b) **Welches ist die von M akzeptierte Sprache L(M)?**
 
-ungerade Anzahl von as & bs
+Wenn man in s bliebt: $|w|_a = |w|_b$
+
+Reise zu p: $|w|_a = |w|_b$
+
+$L(M)=\{w \in \{a,b\}^* | 1*|w|_a \leq |w|_b \leq 2*|w|_a \}$
