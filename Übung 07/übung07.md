@@ -10,13 +10,18 @@ $G=\{\{S,A,B\},\{0,1,\#\},\{S\rightarrow AB, A\rightarrow 0B0|1B1|\#A, B\rightar
 ## Aufgabe 2:
 **Geben Sie für die Sprache $\{xc^n | x \in \{a,b\}^* \text{ und die Anzahl der Vorkommen von a in x ist n}\}$ einen Kellerautomaten an, der die Sprache akzeptiert.**
 
+![Automat](Automat2.jpg)
+
 ---
 ## Aufgabe 3:
 **Sei $M=(K,\Sigma,\Gamma,\Delta,s,F)$ ein Kellerautomat mit $K=\{s,f\}, \Sigma = \Gamma = \{a,b\},F=\{f\}$ und
 $$\Delta = \{((s,a,\varepsilon),(s,aaa)),((s,\varepsilon,\varepsilon),(f,\varepsilon)),((f,b,aa),(f,\varepsilon))\}$$**
 
 a) **Welche Sprache wird von M akzeptiert?**
+
 b) **Transformieren Sie M in einen äquivalenten Kellerautomaten M′ in Normalform.**
+
+![Automat](Automat3.jpg)
 
 ## Aufgabe 4:
 **Sei $M=(K,\Sigma,\Gamma,\Delta,s,F)$ der durch nebenstehendes Zustandsübergangsdiagramm gegebene Kellerautomat. M ist in Normalform. In der Vorlesung haben wir ein Konstruktionsverfahren kennengelernt, um eine kontextfreie Grammatik G zu erzeugen, so dass $L(G)=L(M)$. Geben Sie eine Ableitung für das Wort $aababb \in L(G)$ an. Sie brauchen hier nur jene Produktionsregeln der Grammatik zu erzeugen, die Sie für die Ableitung benötigen.**
@@ -26,9 +31,14 @@ b) **Transformieren Sie M in einen äquivalenten Kellerautomaten M′ in Normalf
 ---
 ## Aufgabe 5:
 **Sei $G=(V,\Sigma,R,S)$ eine kontextfreie Grammatik mit $\Sigma = \{a, b\}, V = \{S, B, U \}$ und $R = {S \rightarrow BU, B \rightarrow aBa | bBb | \varepsilon, U \rightarrow aUb | \varepsilon}$**
+
 a) **Konstruieren Sie mit Hilfe des in der Vorlesung angegeben Verfahrens einen Kellerautomaten M, der L(G) akzeptiert.**
+
 b) **Geben Sie einen Syntaxbaum für aaab an.**
+
+
 c) **Geben Sie eine Linksableitung für aaab an.**
+
 d) **Geben Sie eine akzeptierende Berechnung des Kellerautomaten M für das Eingabewort aaab an.**
 
 ---
