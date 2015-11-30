@@ -16,6 +16,9 @@ $G=\{\{S,A,B\},\{0,1,\#\},\{S\rightarrow AB, A\rightarrow 0B0|1B1|\#A, B\rightar
 $$\Delta = \{((s,a,\varepsilon),(s,aaa)),((s,\varepsilon,\varepsilon),(f,\varepsilon)),((f,b,aa),(f,\varepsilon))\}$$**
 
 a) **Welche Sprache wird von M akzeptiert?**
+
+$\{ w \in \{a,b\}^* | 2*|w|_a = 3*|w|_b\}$
+
 b) **Transformieren Sie M in einen äquivalenten Kellerautomaten M′ in Normalform.**
 
 ## Aufgabe 4:
