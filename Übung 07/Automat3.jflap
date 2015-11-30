@@ -3,17 +3,17 @@
 		<structure mode="Default mode" type="pda">
 			<structure type="final_states">
 				<state>
-					<name>q1</name>
+					<name>f</name>
 					<id>1</id>
 				</state>
 			</structure>
 			<structure type="state_set">
 				<state>
-					<name>q0</name>
+					<name>s</name>
 					<id>0</id>
 				</state>
 				<state>
-					<name>q1</name>
+					<name>f</name>
 					<id>1</id>
 				</state>
 			</structure>
@@ -25,16 +25,22 @@
 			<structure type="BOS_symbol">
 				<value>Z</value>
 			</structure>
+			<structure type="start_state">
+				<state>
+					<name>s</name>
+					<id>0</id>
+				</state>
+			</structure>
 			<structure type="transition_set">
 				<transition>
 					<pop>ε</pop>
 					<input>a</input>
 					<from>
-						<name>q0</name>
+						<name>s</name>
 						<id>0</id>
 					</from>
 					<to>
-						<name>q0</name>
+						<name>s</name>
 						<id>0</id>
 					</to>
 					<push>aaa</push>
@@ -43,11 +49,11 @@
 					<pop>ε</pop>
 					<input>ε</input>
 					<from>
-						<name>q0</name>
+						<name>s</name>
 						<id>0</id>
 					</from>
 					<to>
-						<name>q1</name>
+						<name>f</name>
 						<id>1</id>
 					</to>
 					<push>ε</push>
@@ -56,11 +62,11 @@
 					<pop>aa</pop>
 					<input>b</input>
 					<from>
-						<name>q1</name>
+						<name>f</name>
 						<id>1</id>
 					</from>
 					<to>
-						<name>q1</name>
+						<name>f</name>
 						<id>1</id>
 					</to>
 					<push>ε</push>
@@ -70,12 +76,6 @@
 				<symbol>Z</symbol>
 				<symbol>a</symbol>
 				<symbol>ε</symbol>
-			</structure>
-			<structure type="start_state">
-				<state>
-					<name>q0</name>
-					<id>0</id>
-				</state>
 			</structure>
 		</structure>
 		<state_point_map>

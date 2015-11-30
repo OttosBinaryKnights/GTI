@@ -19,13 +19,13 @@ $$\Delta = \{((s,a,\varepsilon),(s,aaa)),((s,\varepsilon,\varepsilon),(f,\vareps
 
 a) **Welche Sprache wird von M akzeptiert?**
 
-
 $\{ w \in \{a,b\}^* | 2*|w|_a = 3*|w|_b\}$
 
 b) **Transformieren Sie M in einen äquivalenten Kellerautomaten M′ in Normalform.**
 
-![Automat](Automat3.jpg)
+![Automat](Automat3_GNF.jpg)
 
+---
 ## Aufgabe 4:
 **Sei $M=(K,\Sigma,\Gamma,\Delta,s,F)$ der durch nebenstehendes Zustandsübergangsdiagramm gegebene Kellerautomat. M ist in Normalform. In der Vorlesung haben wir ein Konstruktionsverfahren kennengelernt, um eine kontextfreie Grammatik G zu erzeugen, so dass $L(G)=L(M)$. Geben Sie eine Ableitung für das Wort $aababb \in L(G)$ an. Sie brauchen hier nur jene Produktionsregeln der Grammatik zu erzeugen, die Sie für die Ableitung benötigen.**
 
