@@ -19,6 +19,9 @@ $$\Delta = \{((s,a,\varepsilon),(s,aaa)),((s,\varepsilon,\varepsilon),(f,\vareps
 
 a) **Welche Sprache wird von M akzeptiert?**
 
+
+$\{ w \in \{a,b\}^* | 2*|w|_a = 3*|w|_b\}$
+
 b) **Transformieren Sie M in einen äquivalenten Kellerautomaten M′ in Normalform.**
 
 ![Automat](Automat3.jpg)
