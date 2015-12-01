@@ -61,12 +61,36 @@ $\Rightarrow_M (s,\varepsilon,\varepsilon)$
 
 a) **Konstruieren Sie mit Hilfe des in der Vorlesung angegeben Verfahrens einen Kellerautomaten M, der L(G) akzeptiert.**
 
+![Automat](Automat5a.jpg)
+
 b) **Geben Sie einen Syntaxbaum für aaab an.**
 
+![Baum](Baum5b.jpg)
 
 c) **Geben Sie eine Linksableitung für aaab an.**
 
+| Regel                      | Ableitung |
+|  ------------------------  |  -------  |
+|                            | S         |
+| $S\rightarrow BU$          | BU        |
+| $B\rightarrow aBa$         | aBaU      |
+| $B\rightarrow \varepsilon$ | aaU       |
+| $U\rightarrow aUb$         | aaaUb     |
+| $U\rightarrow \varepsilon$ | aaab      |
+
 d) **Geben Sie eine akzeptierende Berechnung des Kellerautomaten M für das Eingabewort aaab an.**
+
+| $(p,aaab,\varepsilon)$ | $\vdash_M (q,aaab,S)$ |
+| ---------------------- | -------------------- |
+|                        | $\vdash_M (q,aaab,BU)$ |
+|                        | $\vdash_M (q,aaab,aBaU)$ |
+|                        | $\vdash_M (q,aab,BaU)$ |
+|                        | $\vdash_M (q,aab,aU)$ |
+|                        | $\vdash_M (q,ab,U)$ |
+|                        | $\vdash_M (q,ab,aUb)$ |
+|                        | $\vdash_M (q,b,Ub)$ |
+|                        | $\vdash_M (q,b,b)$ |
+|                        | $\vdash_M (q,\varepsilon,\varepsilon)$ |
 
 ---
 ## Aufgabe 6:
