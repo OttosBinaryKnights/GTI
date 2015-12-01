@@ -31,6 +31,30 @@ b) **Transformieren Sie M in einen äquivalenten Kellerautomaten M′ in Normalf
 
 ![Automat](Automat1.png)
 
+| Zustand | restliches Eingabewort | Kellerinhalt | Regel |
+| :-----: | :--------------------: | :----------: | :---: |
+|    s    |         aababb         |              | $(s,a,\varepsilon),(s,a)$ |
+|    s    |         ababb          |       a      | $(s,a,\varepsilon),(s,a)$ |
+|    s    |         babb           |      aa      | $(s,b,\varepsilon),(s,b)$ |
+|    s    |         abb            |     baa      | $(s,a,b),(s,\varepsilon)$ |
+|    s    |          bb            |      aa      | $(s,b,a),(s,\varepsilon)$ |
+|    s    |           b            |       a      | $(s,b,a),(s,\varepsilon)$ |
+|    s    |    $\varepsilon$       | $\varepsilon$ |                          |
+
+oder
+
+$(s,aababb,\varepsilon)\Rightarrow_M (s,ababb,a)$
+
+$\Rightarrow_M (s,babb,aa)$
+
+$\Rightarrow_M (s,abb,baa)$
+
+$\Rightarrow_M (s,bb,aa)$
+
+$\Rightarrow_M (s,b,a)$
+
+$\Rightarrow_M (s,\varepsilon,\varepsilon)$
+
 ---
 ## Aufgabe 5:
 **Sei $G=(V,\Sigma,R,S)$ eine kontextfreie Grammatik mit $\Sigma = \{a, b\}, V = \{S, B, U \}$ und $R = {S \rightarrow BU, B \rightarrow aBa | bBb | \varepsilon, U \rightarrow aUb | \varepsilon}$**
