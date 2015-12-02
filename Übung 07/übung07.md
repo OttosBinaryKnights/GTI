@@ -4,10 +4,14 @@
 $$\{x^R\#y | x,y \in \{0,1\}^*, x \text{ ist ein Teilwort von y}\}$$
 erzeugt.**
 
-$G=\{\{S,A,B\},\{0,1,\#\},\{S\rightarrow AB, A\rightarrow 0B0|1B1|\#A, B\rightarrow 0A|1A|\varepsilon\}, S\}$
 
-*cyberkeilers Lösung*
 $G=\{\{S,A,B\},\{0,1,\#\},\{S\rightarrow AB, A\rightarrow 0A0|1A1|\#B, B\rightarrow 0B|1B|\varepsilon\}, S\}$
+
+Varianten:
+
+$G=\{\{S,A,B\},\{0,1,\#\},\{S \rightarrow S0|S1|0S0|1S1|\#\}, S\}$
+
+$G=\{\{S,A,B\},\{0,1,\#\},\{S\rightarrow S_0|S_1|X, X\rightarrow 0X0|1X1|Y, Y\rightarrow Y0|Y1|\#\}, S\}$
 
 ---
 ## Aufgabe 2:
