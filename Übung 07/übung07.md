@@ -4,7 +4,10 @@
 $$\{x^R\#y | x,y \in \{0,1\}^*, x \text{ ist ein Teilwort von y}\}$$
 erzeugt.**
 
-$G=\{\{S,A,B\},\{0,1,\#\},\{S\rightarrow AB, A\rightarrow 0B0|1B1|\#A, B\rightarrow OA|1A|\varepsilon\}, S\}$
+$G=\{\{S,A,B\},\{0,1,\#\},\{S\rightarrow AB, A\rightarrow 0B0|1B1|\#A, B\rightarrow 0A|1A|\varepsilon\}, S\}$
+
+*cyberkeilers Lösung*
+$G=\{\{S,A,B\},\{0,1,\#\},\{S\rightarrow AB, A\rightarrow 0A0|1A1|\#B, B\rightarrow 0B|1B|\varepsilon\}, S\}$
 
 ---
 ## Aufgabe 2:
@@ -22,6 +25,7 @@ a) **Welche Sprache wird von M akzeptiert?**
 $\{ w \in \{a,b\}^* | 2*|w|_ a = 3*|w|_ b\}$
 
 b) **Transformieren Sie M in einen äquivalenten Kellerautomaten M′ in Normalform.**
+*Übergange zu dreifach a trennen in einzelne Übergänge*
 
 ![Automat](Automat3_GNF.jpg)
 
