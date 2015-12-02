@@ -102,3 +102,23 @@ Die Sprache $\{a^nb^ma^n | n,m \leq 0 \text{ und m ist gerade} \} = \{a^nb^ma^n 
 ---
 ## Aufgabe 7:
 **Beweisen oder widerlegen Sie: Die Sprache $L=\{a^{3k}ba^{2k}ba^k | k \leq 0\}$ ist kontextfrei.**
+
+Widerlegen mit Pumping Lemma:
+
+Beweis: Angenommen $L \in CF$. Dann existriert eine Konstante $h \geq 1$ wie im Punkpunt Lemma. Wähle $z=a^{3n}ba^{2n}ba^n \in L$ und es gilt $|z| = 6n+2 \Rightarrow |z| \geq n$
+
+Also existiert $u,v,w,x,y \in \Sigma^*$, sodass $z=uvwxy, vx \neq \epsilon, |vwx| < n$
+
+$z = a^{3n}ba^{2b}ba^n$
+
+1. $vwx$ liegt ersten a-Block.
+
+  $vx = a^l, l\geq 1$
+
+  wähle $i=0: uv^0wx^0y=a^{3n-l}ba^{2n}ba^{n} \notin L$ Wdspr.
+
+2. $vwx$ liegt ganz im zweiten a-Block.
+
+  also in a^{3n}ba^2nba^n: analog zu 1.
+
+3. $vwx$ liegt im letzten a-Block (analog zu 1.)
