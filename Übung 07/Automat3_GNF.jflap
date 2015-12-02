@@ -1,168 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?><structure type="editor_panel">
 	<structure type="transition_graph">
 		<structure mode="Default mode" type="pda">
+			<structure type="BOS_symbol">
+				<value>Z</value>
+			</structure>
+			<structure type="final_states"/>
+			<structure type="stack_alph">
+				<symbol>Z</symbol>
+				<symbol>a</symbol>
+				<symbol>c</symbol>
+			</structure>
+			<structure type="input_alph">
+				<symbol>a</symbol>
+				<symbol>b</symbol>
+			</structure>
 			<structure type="transition_set">
 				<transition>
-					<pop>ε</pop>
+					<pop/>
 					<input>a</input>
 					<from>
-						<name>q0</name>
+						<name>S</name>
 						<id>0</id>
 					</from>
 					<to>
-						<name>q1</name>
+						<name>S1</name>
 						<id>1</id>
 					</to>
 					<push>a</push>
 				</transition>
 				<transition>
-					<pop>ε</pop>
-					<input>ε</input>
+					<pop/>
+					<input/>
 					<from>
-						<name>q0</name>
+						<name>S</name>
 						<id>0</id>
 					</from>
 					<to>
-						<name>q3</name>
+						<name>f1</name>
 						<id>3</id>
 					</to>
-					<push>ε</push>
+					<push>c</push>
 				</transition>
 				<transition>
-					<pop>ε</pop>
-					<input>ε</input>
+					<pop/>
+					<input/>
 					<from>
-						<name>q1</name>
+						<name>S1</name>
 						<id>1</id>
 					</from>
 					<to>
-						<name>q2</name>
+						<name>S2</name>
 						<id>2</id>
 					</to>
 					<push>a</push>
 				</transition>
 				<transition>
-					<pop>ε</pop>
-					<input>ε</input>
+					<pop/>
+					<input/>
 					<from>
-						<name>q2</name>
+						<name>S2</name>
 						<id>2</id>
 					</from>
 					<to>
-						<name>q0</name>
+						<name>S</name>
 						<id>0</id>
 					</to>
 					<push>a</push>
+				</transition>
+				<transition>
+					<pop>c</pop>
+					<input/>
+					<from>
+						<name>f1</name>
+						<id>3</id>
+					</from>
+					<to>
+						<name>f</name>
+						<id>4</id>
+					</to>
+					<push/>
 				</transition>
 				<transition>
 					<pop>a</pop>
 					<input>b</input>
 					<from>
-						<name>q3</name>
-						<id>3</id>
+						<name>f</name>
+						<id>4</id>
 					</from>
 					<to>
-						<name>q4</name>
-						<id>4</id>
+						<name>f2</name>
+						<id>5</id>
 					</to>
-					<push>ε</push>
+					<push/>
 				</transition>
 				<transition>
 					<pop>a</pop>
-					<input>ε</input>
+					<input/>
 					<from>
-						<name>q4</name>
-						<id>4</id>
+						<name>f2</name>
+						<id>5</id>
 					</from>
 					<to>
-						<name>q3</name>
-						<id>3</id>
+						<name>f</name>
+						<id>4</id>
 					</to>
-					<push>ε</push>
+					<push/>
 				</transition>
 			</structure>
-			<structure type="input_alph">
-				<symbol>a</symbol>
-				<symbol>b</symbol>
-				<symbol>ε</symbol>
-			</structure>
-			<structure type="start_state">
-				<state>
-					<name>q0</name>
-					<id>0</id>
-				</state>
-			</structure>
-			<structure type="BOS_symbol">
-				<value>Z</value>
-			</structure>
-			<structure type="final_states">
-				<state>
-					<name>q3</name>
-					<id>3</id>
-				</state>
-			</structure>
+			<structure type="start_state"/>
 			<structure type="state_set">
 				<state>
-					<name>q0</name>
+					<name>S</name>
 					<id>0</id>
 				</state>
 				<state>
-					<name>q1</name>
+					<name>S1</name>
 					<id>1</id>
 				</state>
 				<state>
-					<name>q2</name>
+					<name>S2</name>
 					<id>2</id>
 				</state>
 				<state>
-					<name>q3</name>
+					<name>f1</name>
 					<id>3</id>
 				</state>
 				<state>
-					<name>q4</name>
+					<name>f</name>
 					<id>4</id>
 				</state>
-			</structure>
-			<structure type="stack_alph">
-				<symbol>Z</symbol>
-				<symbol>a</symbol>
-				<symbol>ε</symbol>
+				<state>
+					<name>f2</name>
+					<id>5</id>
+				</state>
 			</structure>
 		</structure>
 		<state_point_map>
 			<state_point>
 				<state>0</state>
 				<point>
-					<x>63.0</x>
-					<y>92.46653387504412</y>
+					<x>109.0</x>
+					<y>66.0</y>
 				</point>
 			</state_point>
 			<state_point>
 				<state>1</state>
 				<point>
-					<x>189.0</x>
-					<y>92.0</y>
+					<x>179.0</x>
+					<y>160.0</y>
 				</point>
 			</state_point>
 			<state_point>
 				<state>2</state>
 				<point>
-					<x>308.0</x>
-					<y>92.0</y>
+					<x>46.0</x>
+					<y>160.0</y>
 				</point>
 			</state_point>
 			<state_point>
 				<state>3</state>
 				<point>
-					<x>187.0</x>
-					<y>169.0</y>
+					<x>236.0</x>
+					<y>67.0</y>
 				</point>
 			</state_point>
 			<state_point>
 				<state>4</state>
 				<point>
-					<x>315.0</x>
-					<y>169.0</y>
+					<x>345.0</x>
+					<y>68.0</y>
+				</point>
+			</state_point>
+			<state_point>
+				<state>5</state>
+				<point>
+					<x>345.0</x>
+					<y>177.0</y>
 				</point>
 			</state_point>
 		</state_point_map>
@@ -171,48 +184,56 @@
 				<from>0</from>
 				<to>1</to>
 				<point>
-					<x>125.99999999999999</x>
-					<y>92.23326693752206</y>
+					<x>144.0</x>
+					<y>113.0</y>
 				</point>
 			</control_point>
 			<control_point>
 				<from>1</from>
 				<to>2</to>
 				<point>
-					<x>248.5</x>
-					<y>92.0</y>
+					<x>112.5</x>
+					<y>160.0</y>
 				</point>
 			</control_point>
 			<control_point>
 				<from>2</from>
 				<to>0</to>
 				<point>
-					<x>200.0845284476579</x>
-					<y>-86.49391862063217</y>
+					<x>77.5</x>
+					<y>113.0</y>
+				</point>
+			</control_point>
+			<control_point>
+				<from>5</from>
+				<to>4</to>
+				<point>
+					<x>328.877</x>
+					<y>122.5</y>
 				</point>
 			</control_point>
 			<control_point>
 				<from>0</from>
 				<to>3</to>
 				<point>
-					<x>124.99999999999999</x>
-					<y>130.73326693752205</y>
+					<x>172.5</x>
+					<y>66.5</y>
 				</point>
 			</control_point>
 			<control_point>
 				<from>3</from>
 				<to>4</to>
 				<point>
-					<x>252.0</x>
-					<y>121.0</y>
+					<x>290.5</x>
+					<y>67.5</y>
 				</point>
 			</control_point>
 			<control_point>
 				<from>4</from>
-				<to>3</to>
+				<to>5</to>
 				<point>
-					<x>254.0</x>
-					<y>233.0</y>
+					<x>361.123</x>
+					<y>122.5</y>
 				</point>
 			</control_point>
 		</control_point_map>

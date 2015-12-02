@@ -19,7 +19,7 @@ $$\Delta = \{((s,a,\varepsilon),(s,aaa)),((s,\varepsilon,\varepsilon),(f,\vareps
 
 a) **Welche Sprache wird von M akzeptiert?**
 
-$\{ w \in \{a,b\}^* | 2*|w|_a = 3*|w|_b\}$
+$\{ w \in \{a,b\}^* | 2*|w|_ a = 3*|w|_ b\}$
 
 b) **Transformieren Sie M in einen äquivalenten Kellerautomaten M′ in Normalform.**
 
@@ -31,29 +31,19 @@ b) **Transformieren Sie M in einen äquivalenten Kellerautomaten M′ in Normalf
 
 ![Automat](Automat1.png)
 
-| Zustand | restliches Eingabewort | Kellerinhalt | Regel |
-| :-----: | :--------------------: | :----------: | :---: |
-|    s    |         aababb         |              | $(s,a,\varepsilon),(s,a)$ |
-|    s    |         ababb          |       a      | $(s,a,\varepsilon),(s,a)$ |
-|    s    |         babb           |      aa      | $(s,b,\varepsilon),(s,b)$ |
-|    s    |         abb            |     baa      | $(s,a,b),(s,\varepsilon)$ |
-|    s    |          bb            |      aa      | $(s,b,a),(s,\varepsilon)$ |
-|    s    |           b            |       a      | $(s,b,a),(s,\varepsilon)$ |
-|    s    |    $\varepsilon$       | $\varepsilon$ |                          |
+$\Delta=\{((s,a,b),(s,\varepsilon)),((s,a,\varepsilon),(s,a)),((s,b,a),(s,\varepsilon)),((s,b,\varepsilon),(s,b))\}$
 
-oder
+$A_{pq}\Rightarrow^* w' \Leftrightarrow (p,w,\varepsilon)\vdash^* (q,\varepsilon,\varepsilon)$
 
-$(s,aababb,\varepsilon)\Rightarrow_M (s,ababb,a)$
+$A_{ss}\rightarrow aA_{ss}b | A_{ss}A_{ss} | \varepsilon | bA_{ss}a$
 
-$\Rightarrow_M (s,babb,aa)$
+Ableitung von aababb:
 
-$\Rightarrow_M (s,abb,baa)$
-
-$\Rightarrow_M (s,bb,aa)$
-
-$\Rightarrow_M (s,b,a)$
-
-$\Rightarrow_M (s,\varepsilon,\varepsilon)$
+| $A_{ss}$ | $\Rightarrow aA_{ss}b$ |
+| -------- | ---------------------- |
+|          | $\Rightarrow aaA_{ss}bb$ |
+|          | $\Rightarrow aabA_{ss}abb$ |
+|          | $\Rightarrow aababb$ |
 
 ---
 ## Aufgabe 5:
@@ -72,11 +62,11 @@ c) **Geben Sie eine Linksableitung für aaab an.**
 | Regel                      | Ableitung |
 |  ------------------------  |  -------  |
 |                            | S         |
-| $S\rightarrow BU$          | BU        |
-| $B\rightarrow aBa$         | aBaU      |
-| $B\rightarrow \varepsilon$ | aaU       |
-| $U\rightarrow aUb$         | aaaUb     |
-| $U\rightarrow \varepsilon$ | aaab      |
+| $S\rightarrow BU$          | $\Rightarrow BU$ |
+| $B\rightarrow aBa$         | $\Rightarrow aBaU$ |
+| $B\rightarrow \varepsilon$ | $\Rightarrow aaU$ |
+| $U\rightarrow aUb$         | $\Rightarrow aaaUb$ |
+| $U\rightarrow \varepsilon$ | $\Rightarrow aaab$ |
 
 d) **Geben Sie eine akzeptierende Berechnung des Kellerautomaten M für das Eingabewort aaab an.**
 
