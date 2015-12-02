@@ -11,13 +11,15 @@ Varianten:
 
 $G=\{\{S,A,B\},\{0,1,\#\},\{S \rightarrow S0|S1|0S0|1S1|\#\}, S\}$
 
-$G=\{\{S,A,B\},\{0,1,\#\},\{S\rightarrow S_0|S_1|X, X\rightarrow 0X0|1X1|Y, Y\rightarrow Y0|Y1|\#\}, S\}$
+$G=\{\{S,A,B\},\{0,1,\#\},\{S\rightarrow S0|S1|X, X\rightarrow 0X0|1X1|Y, Y\rightarrow Y0|Y1|\#\}, S\}$
 
 ---
 ## Aufgabe 2:
 **Geben Sie für die Sprache $\{xc^n | x \in \{a,b\}^* \text{ und die Anzahl der Vorkommen von a in x ist n}\}$ einen Kellerautomaten an, der die Sprache akzeptiert.**
 
 ![Automat](Automat2.jpg)
+
+q1 ist Endzustand
 
 ---
 ## Aufgabe 3:
