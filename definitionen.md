@@ -57,3 +57,16 @@ Menge aller Zustände, die vom Zustand q über $\epsilon$-Übergänge erreicht w
  * $\forall w \in L, |w| >= 0$
  * $\exists x,y,z \in \sum^*: w=xyz, y \neq \epsilon, |xy| <= n$,
  * $\forall i >= 0: xy^iz \in L$
+
+ ## Kellerautomat
+ ### Formale Notation
+ **allg.: $M = (K, \sum, \Gamma, \delta, s, F  )$**
+ * $M$ - Automat
+ * $K$ - Menge der Zustände
+ * $F$ - Menge Endzustände ($F \subseteq K$)
+ * $\sum$ - Alphabet (nicht leere, engliche Menge von Zeichen)
+* $\Gamma$ - akzeptierte Zeichen des Kellers
+ * $L$ - Sprache (Menge der Wörter)
+ * $\delta$ - Überführungsfunktion
+ * $s$ - Startzustand ($s \in K$)
+ * $\vdash$ "überführt "
