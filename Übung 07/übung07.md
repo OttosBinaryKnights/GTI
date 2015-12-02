@@ -87,6 +87,8 @@ d) **Geben Sie eine akzeptierende Berechnung des Kellerautomaten M für das Eing
 **Beweisen oder widerlegen Sie:
 Die Sprache $\{a^nb^ma^n | n,m \leq 0 \text{ und m ist gerade} \} = \{a^nb^ma^n | n,m \leq 0\} \cap L(a^* (bb)^* a^*)$ ist kontextfrei.**
 
+![Automat](Automat6.jpg)
+
 ---
 ## Aufgabe 7:
 **Beweisen oder widerlegen Sie: Die Sprache $L=\{a^{3k}ba^{2k}ba^k | k \leq 0\}$ ist kontextfrei.**
