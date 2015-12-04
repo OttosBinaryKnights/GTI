@@ -2,6 +2,8 @@
 ## Aufgabe 1:
 **Ist die Sprache $L=\{xy | x,y \in \{a,b\}^* \land |x|=|y|\}$ kontextfrei? Begründen Sie ihre Antwort!**
 
+![Automat](Automat1.jpg)
+
 ---
 ## Aufgabe 2:
 **Ist die Sprache $L=\{a^ib^jc^k | 0 \leq i \leq j \leq k \}$  kontextfrei? Begründen Sie ihre Antwort!**
@@ -9,6 +11,8 @@
 ---
 ## Aufgabe 3:
 **Sei G eine kontextfreie Grammatik in Chomsky Normalform. Zeigen Sie, dass jeder Syntaxbaum für ein Wort der Länge n aus L(G) genau $2n-1$ Knoten besitzt, die mit Nichtterminalen beschriftet sind.**
+
+ I.A. 
 
 ---
 ## Aufgabe4:
