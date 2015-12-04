@@ -12,7 +12,14 @@
 ## Aufgabe 3:
 **Sei G eine kontextfreie Grammatik in Chomsky Normalform. Zeigen Sie, dass jeder Syntaxbaum für ein Wort der Länge n aus L(G) genau $2n-1$ Knoten besitzt, die mit Nichtterminalen beschriftet sind.**
 
- I.A. 
+NT-Knoten = Nichtterminale Knoten
+Blatt = Terminale
+
+![Baum](tree.png)
+
+ * I.Anfang: für n=1: 1 Blatt $\Rightarrow$ 1 NT-Knoten
+
+ * I.Schritt: n>1 Blätter
 
 ---
 ## Aufgabe4:
@@ -20,6 +27,56 @@
 $$R=\{S \rightarrow AB | BC, A \rightarrow BA | a, B \rightarrow CC | b, C \rightarrow AB | a\}$$
 
 **eine kontextfreie Grammatik in Chomsky Normalform. Überprüfen Sie mit Hilfe des CYK-Algorithmus, ob baaba zu L(G) gehört. Welche Präfixe von baaba gehören zu L(G)?**
+
+w=baaba
+
+$\begin{matrix}
+   &  1  &  2    &  3    &  4  &  5    \\
+   &  b  &  a    &  a    &  b  &  a    \\
+ 1 & {B} &  .    &  .    &  .  &  .    \\
+ 2 &     & {A,C} &  .    &  .  &  .    \\
+ 3 &     &       & {A,C} &  .  &  .    \\
+ 4 &     &       &       & {B} &  .    \\
+ 5 &     &       &       &     & {A,C} \\
+\end{matrix}$
+$\Rightarrow \begin{matrix}
+   &  1  &  2    &  3    &  4    &  5    \\
+   &  b  &  a    &  a    &  b    &  a    \\
+ 1 & {B} & {A,S} &  .    &  .    &  .    \\
+ 2 &     & {A,C} & {B}   &  .    &  .    \\
+ 3 &     &       & {A,C} & {S,C} &  .    \\
+ 4 &     &       &       & {B}   & {A,S} \\
+ 5 &     &       &       &       & {A,C} \\
+\end{matrix}$
+$\Rightarrow \begin{matrix}
+   &  1  &  2    &  3        &  4    &  5    \\
+   &  b  &  a    &  a        &  b    &  a    \\
+ 1 & {B} & {A,S} & \emptyset &  .    &  .    \\
+ 2 &     & {A,C} & {B}       & {B}   &  .    \\
+ 3 &     &       & {A,C}     & {S,C} & {B}   \\
+ 4 &     &       &           & {B}   & {A,S} \\
+ 5 &     &       &           &       & {A,C} \\
+\end{matrix}$
+$\Rightarrow \begin{matrix}
+   &  1  &  2    &  3        &  4        &  5      \\
+   &  b  &  a    &  a        &  b        &  a      \\
+ 1 & {B} & {A,S} & \emptyset & \emptyset &  .      \\
+ 2 &     & {A,C} & {B}       & {B}       & {S,A,C} \\
+ 3 &     &       & {A,C}     & {S,C}     & {B}     \\
+ 4 &     &       &           & {B}       & {A,S}   \\
+ 5 &     &       &           &           & {A,C}   \\
+\end{matrix}$
+$\Rightarrow \begin{matrix}
+   &  1  &  2    &  3        &  4        &  5      \\
+   &  b  &  a    &  a        &  b        &  a      \\
+ 1 & {B} & {A,S} & \emptyset & \emptyset & {S,A,C} \\
+ 2 &     & {A,C} & {B}       & {B}       & {S,A,C} \\
+ 3 &     &       & {A,C}     & {S,C}     & {B}     \\
+ 4 &     &       &           & {B}       & {A,S}   \\
+ 5 &     &       &           &           & {A,C}   \\
+\end{matrix}$
+
+$S\in N[1,5] \rightarrow w \in L(G)$
 
 ---
 ## Aufgabe5:
