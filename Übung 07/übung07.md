@@ -122,3 +122,15 @@ $z = a^{3n}ba^{2b}ba^n$
   also in a^{3n}ba^2nba^n: analog zu 1.
 
 3. $vwx$ liegt im letzten a-Block (analog zu 1.)
+
+4. $vwx$ schneidet die ersten beiden a-Blöcke $vwx = a^kba^l$
+
+  Es ist ausgeschlossen, dass $v$ oder $x$ das b enthalten (dennd ann wäre $uv^0wx^0y \notin L$)
+
+  Also v im ersten a-Block und x im zweite a-Block $v=a^{k'}$, $x=a^{l'}$ $k'+l'\geq 1$
+
+    $uv^0wx^0y = a^{3n-k'}ba^{2n-l'}ba^n \notin L$
+
+5. $vwx$ schneidet zweiten und dritten a-Block Analog zu (4),
+
+Das sind alle Fälle -> Wdspr.
