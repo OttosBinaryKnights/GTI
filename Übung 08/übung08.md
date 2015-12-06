@@ -118,7 +118,7 @@ $S\in N[1,5] \rightarrow w \in L(G)$
 
  c) **Welche Sprache wird von M entschieden?** *(ohne Beweis)*
 
- $L(M)=\{0^n| n=\{1,2,4\}\}$
+ $L(M)=\{0^n| n=\{1,2,4\}\}$ oder $L(M)=\{0^{2^n}|n\leq0\}$
 
 ---
 ## Aufgabe 6:
