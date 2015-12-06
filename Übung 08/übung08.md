@@ -8,6 +8,16 @@
 ## Aufgabe 2:
 **Ist die Sprache $L=\{a^ib^jc^k | 0 \leq i \leq j \leq k \}$  kontextfrei? Begründen Sie ihre Antwort!**
 
+1) $\forall L \in CF$ (in Kontextfreie Spachen)
+
+2) $\exists n \geq 1$
+
+3) $\forall z \in L$, $|z| \geq n$
+
+4) $\exists uvwxy \in \Sigma^*, (v*x) \neq \epsilon, |vwx|<n, z = uvwx$
+
+5) $\forall i \geq 0: uv^iwx^iy \in L$
+
 ---
 ## Aufgabe 3:
 **Sei G eine kontextfreie Grammatik in Chomsky Normalform. Zeigen Sie, dass jeder Syntaxbaum für ein Wort der Länge n aus L(G) genau $2n-1$ Knoten besitzt, die mit Nichtterminalen beschriftet sind.**
