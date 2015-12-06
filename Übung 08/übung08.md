@@ -103,11 +103,11 @@ $S\in N[1,5] \rightarrow w \in L(G)$
  $\begin{matrix}
  (\varepsilon,q_1,00 ) & \vdash_M (\varepsilon, q_2, 0)\\
   & \vdash_M (x,q_3,\varepsilon) \\
-  & \vdash_M (x,q_7,\varepsilon) \\
-  & \vdash_M (x,q_7,\varepsilon) \\
-  & \vdash_M (x,q_2,\varepsilon) \\
+  & \vdash_M (\varepsilon,q_7,x) \\
+  & \vdash_M (\varepsilon,q_7,\sqcup x) \\
+  & \vdash_M (\varepsilon,q_2,x) \\
   & \vdash_M (\varepsilon, q_2, \varepsilon) \\
-  & \vdash_M (\varepsilon, q_5, \varepsilon)
+  & \vdash_M (x\sqcup, q_5, \varepsilon)
  \end{matrix}$
 
  b) **Welche Wörter aus $\{\varepsilon, 0, 00, 000, 0000, 00000\}$ gehören zu L(M)?**
