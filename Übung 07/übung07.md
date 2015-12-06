@@ -105,6 +105,16 @@ Die Sprache $\{a^nb^ma^n | n,m \leq 0 \text{ und m ist gerade} \} = \{a^nb^ma^n 
 
 Widerlegen mit Pumping Lemma:
 
+1) $\forall L \in CF$ (in Kontextfreie Spachen)
+
+2) $\exists n \geq 1$
+
+3) $\forall z \in L$, $|z| \geq n$
+
+4) $\exists uvwxy \in \Sigma^*, (v*x) \neq \epsilon, |vwx|<n, z = uvwx$
+
+5) $\forall i \geq 0: uv^iwx^iy \in L$
+
 Beweis: Angenommen $L \in CF$. Dann existriert eine Konstante $h \geq 1$ wie im Punkpunt Lemma. Wähle $z=a^{3n}ba^{2n}ba^n \in L$ und es gilt $|z| = 6n+2 \Rightarrow |z| \geq n$
 
 Also existiert $u,v,w,x,y \in \Sigma^*$, sodass $z=uvwxy, vx \neq \epsilon, |vwx| < n$
