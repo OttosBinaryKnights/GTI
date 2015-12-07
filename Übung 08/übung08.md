@@ -139,5 +139,7 @@ $S\in N[1,5] \rightarrow w \in L(G)$
 **Begründen Sie jeweils ihre Antwort auf die folgenden Fragen:**
 
  a) **Ist die Klasse der rekursiv aufzählbaren Sprachen abgeschlossen unter Vereinigung?**
+      ja, laut wikipedia https://de.wikipedia.org/wiki/Chomsky-Hierarchie
 
  b) **Ist die Klasse der rekursiv aufzählbaren Sprachen abgeschlossen unter Konkatenation?**
+      ja, laut wikipedia https://de.wikipedia.org/wiki/Chomsky-Hierarchie
