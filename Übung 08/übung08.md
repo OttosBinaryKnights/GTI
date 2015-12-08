@@ -214,6 +214,13 @@ $S\in N[1,5] \rightarrow w \in L(G)$
 ## Aufgabe 6:
 **Ist jede reguläre Sprache auch eine rekursive Sprache? Begründen Sie ihre Antwort!**
 
+ * jede Reguläre Sprach lässt sich in endlichen Automaten umwandeln.
+
+ * jeder endlicher Automat lässt sich als Touringmaschine umwandeln.
+
+ * Touringmaschinen akzeptieren rekursive Sprachen
+
+ $$ \Rightarrow STIMMT ALSO! $$
 ---
 ## Aufgabe 7:
 **Begründen Sie jeweils ihre Antwort auf die folgenden Fragen:**
