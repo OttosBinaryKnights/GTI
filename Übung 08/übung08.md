@@ -18,6 +18,52 @@
 
 5) $\forall i \geq 0: uv^iwx^iy \in L$
 
+**Ang.:**
+
+L wäre kontextfrei, dann existiern eine Zahl $n$ eine in PL. Wir wählen $z = a^n b^n c^n$ $z \in L$  und $|z|=3n \geq n.$
+
+Nach dem PL existieren $u,v,w,x,y, \in \Sigma^*$, z=uvwxy mit $|vwx|<n$ und $vx \neq \epsilon$
+
+**1.Fall**
+
+$vwx$ liegt irgendwo in Präfix $a^nb^n$ von $z$ $$u=a^{n-i}$$
+$$vwx=a^jb^k \text{ ; } j, k \geq 0; j+k <n; j+k \geq 1$$
+$$y=b^{n-k}c^n$$
+
+---
+
+Lösung 1:
+
+**2.Fall**
+
+$vwx$ enthält $c$'s. Dann liegen die c's am Ende von $vwx$. Wenn $x \neq \epsilon$, dann enthält $x$ ein $c$. Aber da $|vwx|<n$ enthält $v$ kein $a$. Wähle $i=0:$
+
+$uv^0wx^0y$ enthält mehr a's als c's
+$$ \Rightarrow Widerspruch$$
+
+sonst war $x=\epsilon$, dann muss aber $v \neq \epsilon$. Wieder enthält vwx keine a's. Wähle wieder $i=0$:
+$uv^0wx^0y$ enthält mehr a's als b's oder c's
+$$ \Rightarrow Beides Widerspruch$$
+
+$$\Rightarrow \text{L nicht kontextfrei}$$
+
+qed.
+
+---
+Diese alternative Lösung 2 braucht mehr Zeit:
+
+Daher wissen wir, dass $v=a^{j_1}b^{k_1}$, $x=a^{j_2}b^{k_2}$
+$$j_1+k_1+j_2+k_2 \geq 1$$
+
+Wähle i = 2:
+$$uv^iwx^iy = a^{n-j}a^{j_1}b^{k_1}a^{j_1}b^{k_1}wa^{j_2}b^{k_2}a^{j_2}b^{k_2}b^{n-k}c^n$$
+
+Da nach Annahme $uv^2wx^2y \in L$, dürfen a's und b's nicht abwechseln:
+$$k_1 \geq 1 \Rightarrow i_1 = 0 \land j_2 = 0$$
+$$j_2 \geq 2 \Rightarrow k_1 = 0 \land k_2 = 0$$
+
+$$... usw. $$
+
 ---
 ## Aufgabe 3:
 **Sei G eine kontextfreie Grammatik in Chomsky Normalform. Zeigen Sie, dass jeder Syntaxbaum für ein Wort der Länge n aus L(G) genau $2n-1$ Knoten besitzt, die mit Nichtterminalen beschriftet sind.**
