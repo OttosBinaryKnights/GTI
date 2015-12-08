@@ -75,8 +75,19 @@ Blatt = Terminale = n
 
 ![Baum](tree.png)
 
+**Beweis durch strukturelle Induktion**
+n= 1 w= \sigma \in \epsilon
+
+S
+|
+\sigma
+
+
 Anzahl der Knoten soll 2n-1 sein
- * I.Anfang: für n=1: 1 Blatt $\Rightarrow$ 1 NT-Knoten
+ * I.Anfang:
+  für alle Wörter der Länger \leq n-1 gelte die Aussage bereits:
+
+  für n=1: 1 Blatt $\Rightarrow$ 1 NT-Knoten
 
  * I.Schritt: n>1 Blätter
 
@@ -85,6 +96,13 @@ Anzahl der Knoten soll 2n-1 sein
  $T_R$ hat n-k Blätter
 
  * I.V.:
+ Sei w der Länge n gegeben
+
+  S
+
+ /\
+
+ Teilbäume A B aushängen
 
  $T_L$ hat $2k-1$ Knoten
 
@@ -104,50 +122,66 @@ w=baaba
 $\begin{matrix}
    &  1  &  2    &  3    &  4  &  5    \\
    &  b  &  a    &  a    &  b  &  a    \\
- 1 & {B} &  .    &  .    &  .  &  .    \\
- 2 &     & {A,C} &  .    &  .  &  .    \\
- 3 &     &       & {A,C} &  .  &  .    \\
- 4 &     &       &       & {B} &  .    \\
- 5 &     &       &       &     & {A,C} \\
+ 1 & \{B\\}&  .    &  .    &  .  &  .    \\
+ 2 &     & \{A,C\\}&  .    &  .  &  .    \\
+ 3 &     &       & \{A,C\}&  .  &  .    \\
+ 4 &     &       &       & \{B\}&  .    \\
+ 5 &     &       &       &     & \{A,C\}\\
 \end{matrix}$
 $\Rightarrow \begin{matrix}
    &  1  &  2    &  3    &  4    &  5    \\
    &  b  &  a    &  a    &  b    &  a    \\
- 1 & {B} & {A,S} &  .    &  .    &  .    \\
- 2 &     & {A,C} & {B}   &  .    &  .    \\
- 3 &     &       & {A,C} & {S,C} &  .    \\
- 4 &     &       &       & {B}   & {A,S} \\
- 5 &     &       &       &       & {A,C} \\
+ 1 & \{B\}& \{A,S\}&  .    &  .    &  .    \\
+ 2 &     & \{A,C\}& \{B\}  &  .    &  .    \\
+ 3 &     &       & \{A,C\}& \{S,C\}&  .    \\
+ 4 &     &       &       & \{B\}  & \{A,S\}\\
+ 5 &     &       &       &       & \{A,C\}\\
 \end{matrix}$
 $\Rightarrow \begin{matrix}
    &  1  &  2    &  3        &  4    &  5    \\
    &  b  &  a    &  a        &  b    &  a    \\
- 1 & {B} & {A,S} & \emptyset &  .    &  .    \\
- 2 &     & {A,C} & {B}       & {B}   &  .    \\
- 3 &     &       & {A,C}     & {S,C} & {B}   \\
- 4 &     &       &           & {B}   & {A,S} \\
- 5 &     &       &           &       & {A,C} \\
+ 1 & \{B\}& \{A,S\}& \emptyset &  .    &  .    \\
+ 2 &     & \{A,C\}& \{B\}      & \{B\}  &  .    \\
+ 3 &     &       & \{A,C\}    & \{S,C\}& \{B\}  \\
+ 4 &     &       &           & \{B\}  & \{A,S\}\\
+ 5 &     &       &           &       & \{A,C\}\\
 \end{matrix}$
 $\Rightarrow \begin{matrix}
    &  1  &  2    &  3        &  4        &  5      \\
    &  b  &  a    &  a        &  b        &  a      \\
- 1 & {B} & {A,S} & \emptyset & \emptyset &  .      \\
- 2 &     & {A,C} & {B}       & {B}       & {S,A,C} \\
- 3 &     &       & {A,C}     & {S,C}     & {B}     \\
- 4 &     &       &           & {B}       & {A,S}   \\
- 5 &     &       &           &           & {A,C}   \\
+ 1 & \{B\}& \{A,S\}& \emptyset & \emptyset &  .      \\
+ 2 &     & \{A,C\}& \{B\}      & \{B\}      & \{S,A,C\}\\
+ 3 &     &       & \{A,C\}    & \{S,C\}    & \{B\}    \\
+ 4 &     &       &           & \{B\}      & \{A,S\}  \\
+ 5 &     &       &           &           & \{A,C\}  \\
 \end{matrix}$
 $\Rightarrow \begin{matrix}
    &  1  &  2    &  3        &  4        &  5      \\
    &  b  &  a    &  a        &  b        &  a      \\
- 1 & {B} & {A,S} & \emptyset & \emptyset & {S,A,C} \\
- 2 &     & {A,C} & {B}       & {B}       & {S,A,C} \\
- 3 &     &       & {A,C}     & {S,C}     & {B}     \\
- 4 &     &       &           & {B}       & {A,S}   \\
- 5 &     &       &           &           & {A,C}   \\
+ 1 & \{B\}& \{A,S\}& \emptyset & \emptyset & \{S,A,C\}\\
+ 2 &     & \{A,C\}& \{B\}      & \{B\}      & \{S,A,C\}\\
+ 3 &     &       & \{A,C\}    & \{S,C\}    & \{B\}    \\
+ 4 &     &       &           & \{B\}      & \{A,S\}  \\
+ 5 &     &       &           &           & \{A,C\}  \\
 \end{matrix}$
 
+
+|   |  1  |  2    |  3        |  4        |  5     |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+|   |  b  |  a    |  a        |  b        |  a     |
+| |
+| 1 | {B} | {A,S} | $\emptyset$ | $\emptyset$ | {S,A,C}|
+| 2 |     | {A,C} | {B}       | {B}       | {S,A,C}|
+| 3 |     |       | {A,C}     | {S,C}     | {B}    |
+| 4 |     |       |           | {B}       | {A,S}  |
+| 5 |     |       |           |           | {A,C}  |
+
+
 $S\in N[1,5] \rightarrow w \in L(G)$
+
+
+**Welche Präfixe von baaba gehören zu L(G)?**
+* überall wo S in der ersten Zeile Steht: nur ba
 
 ---
 ## Aufgabe 5:
