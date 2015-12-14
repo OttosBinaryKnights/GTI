@@ -6,8 +6,8 @@
 
 
 | wahr  | falsch  |    |
-| ----- | ------- | ---- |
-| $\circ$ | $\bullet$ | Es gibt eine rechtslineare Grammatik, die die Sprache $\{a^kb^k | k \geq 2\}$ erzeugt. |
+| :-----: | :-------: | ---- |
+| $\bullet$ | $\circ$ | Es gibt eine rechtslineare Grammatik, die die Sprache $\{a^kb^k | k \geq 2\}$ erzeugt. |
 | $\circ$ | $\circ$   | Jede kontextfreie Sprache ist auch eine rekursive Sprache. |
 | $\circ$ | $\circ$   | Es gibt eine kontextfreie Grammatik, die $L = \{w \in \{a,b\}^* | w$ enthält mehr a als b erzeugt.} |
 | $\circ$  | $\circ$  | $\forall L_1,L_2:$ Falls $L_1$ eine rekursiv aufzählbare Sprache ist und $L_2$ eine reguläre, so ist $L_1 \cup L_2$ eine rekursiv aufzählbare Sprache. |
