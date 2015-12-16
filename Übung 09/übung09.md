@@ -4,6 +4,8 @@
 ![Automat](Automat1.jpg)
 -> Maschine akzeptiert und entscheidet
 
+q6 = reject
+
 ---
 ## Aufgabe 2:
 **Zeigen Sie, dass die Sprache $L = \{a^{2^k} | k \geq 0\}$ nicht kontextfrei ist.**
