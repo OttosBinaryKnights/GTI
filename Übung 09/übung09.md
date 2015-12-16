@@ -1,6 +1,7 @@
 # Übung 9
 ## Aufgabe 1:
 **Geben Sie eine Turingmaschine an, die die Sprache $L(a^*b^*a^*b^*a^*)$ akzeptiert.**
+![Automat](Automat1.jpg)
 
 ---
 ## Aufgabe 2:
