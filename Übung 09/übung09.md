@@ -31,6 +31,7 @@ y=a^l
 ---
 ## Aufgabe 3:
 **Beweisen oder widerlegen Sie: Die Sprache $L=\{a^ib^ja^kb^la^m |i+k+m= j+l\}$ ist kontextfrei.**
+![Automat](Automat3.jpg)
 
 ---
 ## Aufgabe 4:
