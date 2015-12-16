@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><structure type="editor_panel">
 	<structure type="transition_graph">
 		<structure mode="Default mode" type="pda">
-			<structure type="start_state">
-				<state>
-					<name>q0</name>
-					<id>0</id>
-				</state>
+			<structure type="BOS_symbol">
+				<value>Z</value>
 			</structure>
 			<structure type="input_alph">
 				<symbol>a</symbol>
@@ -187,8 +184,8 @@
 					<push/>
 				</transition>
 				<transition>
-					<pop/>
-					<input>b</input>
+					<pop>b</pop>
+					<input/>
 					<from>
 						<name>q4</name>
 						<id>4</id>
@@ -231,8 +228,11 @@
 				<symbol>a</symbol>
 				<symbol>b</symbol>
 			</structure>
-			<structure type="BOS_symbol">
-				<value>Z</value>
+			<structure type="start_state">
+				<state>
+					<name>q0</name>
+					<id>0</id>
+				</state>
 			</structure>
 			<structure type="state_set">
 				<state>
