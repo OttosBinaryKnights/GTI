@@ -21,7 +21,15 @@
 **Beweisen oder widerlegen Sie:
 Die Sprache $\{a^ib^ja^kb^l | i, j,k,l \geq 0,i+ j = k+l\}$ ist regulär.**
 
+Wiederlegen durch Pumping Lemma:
+
+1) $y \neq \epsilon$
+2) $|xy| \leq n$
+3) $xy^iz \in L f. alle i \geq 0$
+
 ---
 ## Aufgabe 3:
 **Beweisen oder widerlegen Sie:
-Die Sprache $\{a^nb^m | m,n \geq 0, n \neq 3m\}$ ist kontextfrei.
+Die Sprache $\{a^nb^m | m,n \geq 0, n \neq 3m\}$ ist kontextfrei.**
+
+Beweis durch aufstellen eines Kellerautomaten
