@@ -23,9 +23,11 @@ Die Sprache $\{a^ib^ja^kb^l | i, j,k,l \geq 0,i+ j = k+l\}$ ist regulär.**
 
 Wiederlegen durch Pumping Lemma:
 
-1) $y \neq \epsilon$
-2) $|xy| \leq n$
-3) $xy^iz \in L f. alle i \geq 0$
+ 1) $y \neq \epsilon$
+ 
+ 2) $|xy| \leq n$
+ 
+ 3) $xy^iz \in L f. alle i \geq 0$
 
 ---
 ## Aufgabe 3:
