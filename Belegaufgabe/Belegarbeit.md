@@ -16,10 +16,10 @@
 | $\bullet$ | $\circ$   | Jede kontextfreie Sprache ist auch eine rekursive Sprache. |
 | $\bullet$ | $\circ$   | Es gibt eine kontextfreie Grammatik, die $L = \{w \in \{a,b\}^* | w$ enthält mehr a als b erzeugt.} |
 | $\bullet$  | $\circ$  | $\forall L_1,L_2:$ Falls $L_1$ eine rekursiv aufzählbare Sprache ist und $L_2$ eine reguläre, so ist $L_1 \cup L_2$ eine rekursiv aufzählbare Sprache. |
-| $\circ$  | $\bullet$  | Es gibt eine Grammatik G, so dass für alle $x,y \in \{a,b\}^*$ mit $|x| = |y|$ gilt $xy \Rightarrow_G^* yx$.
+| $\bullet$  | $\circ$  | Es gibt eine Grammatik G, so dass für alle $x,y \in \{a,b\}^*$ mit $|x| = |y|$ gilt $xy \Rightarrow_G^* yx$.
 | $\bullet$  | $\circ$  | Die Grammatik $G = (\{S\},\{b\},R,S)$ mit $R = \{S \rightarrow Sb | bS | b\}$ ist mehrdeutig. |
 | $\bullet$  | $\circ$  | Sei L eine reguläre Sprache. Dann gibt es einen Kellerautomaten M mit nur 2 verschiedenen Zuständen, so dass $L(M) = L$ gilt. |
-| $\circ$  | $\bullet$  | Die Sprache $\{ww^R w | w \in {a, b}^* \}$ ist entscheidbar.
+| $\bullet$  | $\circ$  | Die Sprache $\{ww^R w | w \in {a, b}^* \}$ ist entscheidbar.
 
 ---
 ## Aufgabe 2:
@@ -65,3 +65,5 @@ Die Sprache ist kontextfrei.
 Beweis durch aufstellen eines Kellerautomaten:
 
 ![Automat](Automat3.jpg)
+
+--> ist falsch
