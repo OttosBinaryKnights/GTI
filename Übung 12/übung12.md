@@ -2,14 +2,42 @@
 ## Aufgabe 1:
 *Seien A und B jeweils NP-vollständig. Gilt dann $B \preceq_PA$ und $A\preceq_PB$? Begründen Sie ihre Antwort.*
 
+$A,B\in NP$ und $\froall L \in NP$
+
+$$L \preceq_PB \Rightarrow A \preceq_PB$$
+$$ L \preceq_PA \Rightarrow B \preceq_PA$$
+
+$\rightarrow$ möglich
+
 ---
 ## Aufgabe 2:
 *Seien $A,B\subset \Sigma^ * $ Sprachen in P, die jeweils nicht leer und jeweils von $\Sigma^ *$ verschieden sind. Gilt dann $A\preceq_PB$? Begründen Sie ihre Antwort.*
+
+$A,B \subset \Sigma^* , A \land B \text{nicht-leer } , \in P$
+
+|               | b,   | falls $x\in A$ |
+| ------------- | ---- | -------------- |
+| $f(x)=\Bigg{$ |      |                |
+|               | b'   | falls $x \notin A$ |
+
+ein festes b das Element von B lässt sich finden, da B echte Teilmenge von $\Sigma^* $ ist.
+
+dann ist $A \preceq_P B$ möglich, da $x \in A \LeftRightarrow f(x)\in B$ erfüllt ist.
+
+$\rightarrow A \preceq_P B$ ist möglich.
 
 ---
 ## Aufgabe 3:
 *Beim Problem 3-FÄRBBARKEIT ist zu entscheiden, ob die Knoten eines ungerichteten Graphen G so mit drei verschiedenen Farben gefärbt werden können, dass keine zwei benachbarten Knoten, also Knoten, die durch eine Kante verbunden sind, die gleiche Farbe haben.
 Zeigen Sie 3-FÄRBBARKEIT$\preceq_P$SAT.*
+
+$G$, 3-färbbar, $\alpha:V\rightarrow\{r,g,b\}$
+
+$G(V,E)$
+
+$\forall \{u,w\}\in E:\alpha(u)\neq \alpha(w)$
+
+3 Variablenpro Knoten $u:x_r^u,x_y^u,x_b^u$
 
 ---
 ## Aufgabe 4:
