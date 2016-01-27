@@ -2,7 +2,10 @@
 ## Aufgabe 1:
 *Seien A und B jeweils NP-vollständig. Gilt dann $B \preceq_PA$ und $A\preceq_PB$? Begründen Sie ihre Antwort.*
 
-$A,B\in NP$ und $\froall L \in NP$
+$A,B\in NPC$
+
+Beweis:
+es sei $\forall L \in NP$
 
 $$L \preceq_PB \Rightarrow A \preceq_PB$$
 $$ L \preceq_PA \Rightarrow B \preceq_PA$$
@@ -13,16 +16,16 @@ $\rightarrow$ möglich
 ## Aufgabe 2:
 *Seien $A,B\subset \Sigma^ * $ Sprachen in P, die jeweils nicht leer und jeweils von $\Sigma^ *$ verschieden sind. Gilt dann $A\preceq_PB$? Begründen Sie ihre Antwort.*
 
-$A,B \subset \Sigma^* , A \land B \text{nicht-leer } , \in P$
+$A,B \subset \Sigma^* , A \land B \text{ nicht-leer } , \in P$, $A \neq \Sigma^* \land B \neq \Sigma^* $
 
 |               | b,   | falls $x\in A$ |
 | ------------- | ---- | -------------- |
-| $f(x)=\Bigg{$ |      |                |
+| $f(x)=\Bigg\{$ |      |                |
 |               | b'   | falls $x \notin A$ |
 
-ein festes b das Element von B lässt sich finden, da B echte Teilmenge von $\Sigma^* $ ist.
+ein festes b, welches Element von B ist, lässt sich finden, da B echte Teilmenge von $\Sigma^* $ ist.
 
-dann ist $A \preceq_P B$ möglich, da $x \in A \LeftRightarrow f(x)\in B$ erfüllt ist.
+dann ist $A \preceq_P B$ möglich, da $x \in A \Leftrightarrow f(x)\in B$ erfüllt ist.
 
 $\rightarrow A \preceq_P B$ ist möglich.
 
