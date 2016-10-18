@@ -71,7 +71,7 @@ ist hier die Untermenge gemeint? also dass (a,b) eine untermenge von (a,(a,b)) d
 
 
  $R^*=\{(a,a),(b,b),(c,c),(d,d),(e,e),(a,b),(a,c),(a,d),(a,e),(d,c),(d,e)\}$
- 
+
  ![Relation01](Relation05.jpg)
 
   *[@belkinot]  was ist mit a,e ?*
@@ -113,7 +113,7 @@ Gegenbeispiel:
       Für alle Alphabete gilt sie sind abzählbar.
       d.h. injektiv und surjektiv -> f :
 
-  $\sum$ -> $N$ und $\forall a \in \sum \exist l \in N$
+  $\sum$ -> $N$ und $\forall a \in \sum \exists l \in N$
 
       Beispiel: $\sum = \{a,b,c\}$
       Ordnung a<b<c
