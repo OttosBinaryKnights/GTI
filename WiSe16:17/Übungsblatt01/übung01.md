@@ -20,18 +20,25 @@ Def. $2^A$ Potenzmenge: Menge aller Teilmengen von A
 Potenzmenge von $\emptyset$ umfasst nur $\emptyset$.
 
  * f) **$\emptyset \subseteq 2^{\emptyset}$**
--> wahr ???
+-> wahr, siehe a)
 
 ---
 
 ## 2. Welche Behauptungen über Mengen sind wahr, welche falsch? Begründen Sie Ihre Anwort.
 
-* a) **$\{a,b\}\subseteq \{a,b,\{a,b\}$**
-* b) **$\{a,b\}\in \{a,b,\{a,b\}$**
+* a) **$\{a,b\}\subseteq \{a,b,\{a,b\}\}$**
+  -> falsch
+* b) **$\{a,b\}\in \{a,b,\{a,b\}\}$**
+  -> wahr
 * c) **$\{a,b\}\subseteq 2^{\{a,b,\{a,b\}\}}$**
+  -> falsch, weil Element a,b nicht rechts als Element vorkommt
+  $2^{\{a,b,\{a,b\}\}}= \{\emptyset,\{a\},\{b\},\{\{a,b\}\},\{a,b\},\{a,\{a,b\}\},\{b,\{a,b\}\},\{a,b,\{a,b\}\}\}$
 * d) **$\{\{a,b\}\}\subseteq 2^{\{a,b,\{a,b\}\}}$**
+  -> wahr, weil Menge {a,b} als Element rechts vorkommt
 * e) **$\{\{a,b\}\}\in 2^{\{a,b,\{a,b\}\}}$**
+  -> wahr
 * f) **$\{a,\{a,b\}\}\subseteq 2^{\{a,b,\{a,b\}\}}$**
+  ->wahr,
 
 ---
 
@@ -79,4 +86,4 @@ Potenzmenge von $\emptyset$ umfasst nur $\emptyset$.
 -> $M_1=\{x\in \mathbb{N} |\exists y \in \mathbb{N}: x=2y\}$
 * b) **Die Menge aller Mengen über $\{a,b,c,d\}$, die ein a enthalten.**
 -> $U=\{a,b,c,d\}$
--> $M_2=\{X\in U^+ | \{a\}\subseteq X\}$
+-> $M_2=\{X\subseteq U | a\in X\}$
