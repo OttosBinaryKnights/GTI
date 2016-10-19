@@ -15,7 +15,7 @@
  -> wahr, $\{\} \in \{\{\}\}$ Menge enthält $\{\}$ als Element
 
  * e) **$\emptyset \in 2^{\emptyset}$**
--> falsch, laut Definition:
+-> wahr, laut Definition:
 Def. $2^A$ Potenzmenge: Menge aller Teilmengen von A
 Potenzmenge von $\emptyset$ umfasst nur $\emptyset$.
 
@@ -45,14 +45,20 @@ Potenzmenge von $\emptyset$ umfasst nur $\emptyset$.
 ## 3. Welche Behauptungen über Mengen sind wahr, welche falsch? Begründen Sie Ihre Anwort.
 
 * a) **$\forall M_1,M_2:(M_1\cup M_2)=(M_2\cup M_1)$**
--> wahr, da die Vereinigung von Mengen Kommutativ ist
+-> wahr, $M_1\cup M_2=\{x|x\in M_1 \lor x \in M_2$
+  $=\{x|x\in M_2 \lor x\in M_1\}$
+  $=M_2\cup M_1$
 * b) **$\forall M_1,M_2: (M_1-M_2)=(M_2-M_1)$**
 -> falsch, Gegenbeispiel:
   * $M_1=\{a\}$
   * $M_2=\{a,b\}$
   * $\{\}\neq \{b\}$
 * c) **$\forall M_1,M_2,M_3: (M_1\cap M_2)\cap M_3 = M_1 \cap (M_2 \cap M_3)$**
--> wahr, da der Schnitt von Mengen Assoziativ ist
+-> wahr, $(M_1\cap M_2)\cap M_3$
+$=\{x|x\in (M_1 \land M_2)\land x\in M_3\}$
+$=\{x|x\in M_1 \land x|x\in M_3 \land x\in M_3\}$
+$=\{x|x\in M_1 \land (x\in M2 \land M_3)\}$
+$=M_1\cap (M_2 \cap M_3)$
 * d) **$\forall M_1,M_2,M_3: (M_1 - M_2)- M_3 = M_1 - (M_2 - M_3)$**
 -> falsch
   * Gegenbeispiel:

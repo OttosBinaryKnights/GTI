@@ -12,12 +12,15 @@ $\forall a,b,c \in A:aRb \land bRc \Rightarrow aRc$
 
 * a) Bestimmen Sie die reflexive und transitive Hülle $R^* $ der Relation R.
 
-  $R=\{(a,a),(b,b),(c,c),(a,b),(b,c),(a,c)\}$
+  $R=\{(a,a),(b,b),(c,c),(d,d),(e,e),(a,b),(a,c),(a,d),(a,e), (d,c), (d,e)\}$
 
-  ![Relation01](Relation02.jpg)
+
 
 * b) Zeichnen Sie die gerichteten Graphen $G = (M, R)$ und $G^* = (M, R^* )$.
-
+$$G = (M, R)$$
+![Relation01](Relation04.jpg)
+$$G^* = (M, R^* )$$
+![Relation01](Relation05.jpg)
 ---
 
 ## 2.
