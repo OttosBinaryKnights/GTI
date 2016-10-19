@@ -27,18 +27,18 @@ Potenzmenge von $\emptyset$ umfasst nur $\emptyset$.
 ## 2. Welche Behauptungen über Mengen sind wahr, welche falsch? Begründen Sie Ihre Anwort.
 
 * a) **$\{a,b\}\subseteq \{a,b,\{a,b\}\}$**
-  -> falsch
+  -> wahr, a und b sind als Elemente in der Menge
 * b) **$\{a,b\}\in \{a,b,\{a,b\}\}$**
   -> wahr
 * c) **$\{a,b\}\subseteq 2^{\{a,b,\{a,b\}\}}$**
-  -> falsch, weil Element a,b nicht rechts als Element vorkommt
+  -> falsch, weil Element a,b nicht rechts als Element vorkommt, nur als Menge
   $2^{\{a,b,\{a,b\}\}}= \{\emptyset,\{a\},\{b\},\{\{a,b\}\},\{a,b\},\{a,\{a,b\}\},\{b,\{a,b\}\},\{a,b,\{a,b\}\}\}$
 * d) **$\{\{a,b\}\}\subseteq 2^{\{a,b,\{a,b\}\}}$**
   -> wahr, weil Menge {a,b} als Element rechts vorkommt
 * e) **$\{\{a,b\}\}\in 2^{\{a,b,\{a,b\}\}}$**
   -> wahr
 * f) **$\{a,\{a,b\}\}\subseteq 2^{\{a,b,\{a,b\}\}}$**
-  ->wahr,
+  -> falsch, da a nicht als Element vorhanden ist sondern als Menge
 
 ---
 
@@ -54,14 +54,17 @@ Potenzmenge von $\emptyset$ umfasst nur $\emptyset$.
 * c) **$\forall M_1,M_2,M_3: (M_1\cap M_2)\cap M_3 = M_1 \cap (M_2 \cap M_3)$**
 -> wahr, da der Schnitt von Mengen Assoziativ ist
 * d) **$\forall M_1,M_2,M_3: (M_1 - M_2)- M_3 = M_1 - (M_2 - M_3)$**
--> wahr
+-> falsch
+  * Gegenbeispiel:
+  $\{a\}-(\{a\}-\{a\})=\{a\}$
+  $(\{a\}-\{a\})-\{a\}=\emptyset$
 
 ---
 
 ## 4. Listen Sie jeweils alle Elemente der folgenden Mengen auf.
 
 * a) **$M_1=\{5x|x\in \mathbb{N}_0, x\leq 4\}$**
--> $M_1=\{0\}$
+-> $M_1=\{0,5,10,15,20\}$
 * b) **$M_2=\{x\in \mathbb{N} | 1\leq x^3 \leq 100\}$**
 -> $M_2=\{1,...,4\}$
 * c) **$M_3=\{x\in \mathbb{N} | \exists y \in \mathbb{N} :x=6y \land 1\leq x\leq 50$**
@@ -74,9 +77,9 @@ Potenzmenge von $\emptyset$ umfasst nur $\emptyset$.
 ## 5. Beschreiben Sie in natürlicher Sprache, welche Elemente in den folgenden Mengen bezüglich des Universums $U = \{a, b, c, d\}$ enthalten sind.
 
 * a) **$M_1 = \{X\subseteq U | \exists Y\subseteq U:X\cup Y = \{a,b\}\}$**
--> Menge aller Mengen, die die $\{a\}$ oder $\{b\}$ enthalten
+-> Alle Teilmengen von $\{a,b\}$
 * b) **$M_1 = \{X\subseteq U | \exists Y\subseteq U:X\cap Y = \{a,b\}\}$**
--> Menge aller Mengen, die die $\{a\}$ und $\{b\}$ enthalten
+-> Alle Obermengen von $\{a,b\}$ (alle Mengen, die a und b enthalten)
 
 ---
 
