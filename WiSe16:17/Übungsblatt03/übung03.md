@@ -36,20 +36,52 @@ $(\{a,b\})^* \neq \{a\}^* \{b\}^* $
 
 ## 3. Geben Sie jeweils Zustandsdiagramme deterministischer endlicher Automaten an, die die folgenden Sprachen akzeptieren.
 * a) $\{w\in \{0,1\}^* | w\text{ hat das Suffix } 00\}$
+![Automat](Automat3a.png)
 * b) $\{w \in \{0, 7\}^* | w \text{ enthaelt das Teilwort } 007\}$
+![Automat](Automat3b.png)
 * c) $\{w \in \{a, b\}^* | w \text{ enthaelt das Teilwort ab nicht}\}$
+![Automat](Automat3c.png)
 
 ---
 
 ## 4. Geben Sie das Zustandsdiagramm eines deterministischen endlichen Automaten an, der die Sprache $\{w \in \{a, b\}^* | w \text{ hat gerade Laenge und enthaelt ungeradzahlig viele a}\}$ akzeptiert.
 *Diese Sprache ist der Schnitt zweier regulärer Sprachen. Konstruieren Sie zunächst deterministische endliche Automaten für diese Teilsprachen und kombinieren Sie dann die beiden Automaten wie in der Vorlesung angegeben.*
 
+![Automat](Automat4_1.png)
+
+| $q_i$ | | a | b |
+| --- | --- | :---: | :---: |
+| $q_0$ | | $q_1$ | $q_1$ |
+| $q_1$ | | $q_0$ | $q_0$ |
+
+
+![Automat](Automat4_2.png)
+
+| $q_j$ | | a | b |
+| --- | --- | :---: | :---: |
+| $q_0$ | | $q_1$ | $q_0$ |
+| $q_1$ | | $q_0$ | $q_1$ |
+
+$q_{ij}=(q_i,q_j): $
+
+![Automat](Automat4_3.png)
+
+| $q_{ij}$ | | a | b |
+| --- | --- | :---: | :---: |
+| $q_{00}$ | | $q_{11}$ | $q_{10}$ |
+| $q_{01}$ | | $q_{10}$ | $q_{11}$ |
+| $q_{10}$ | | $q_{01}$ | $q_{00}$ |
+| $q_{11}$ | | $q_{00}$ | $q_{01}$ |
+
 ---
 
 ## 5. Geben Sie jeweils Zustandsdiagramme (nichtdeterministischer) endlicher Automaten an, die die folgenden Sprachen akzeptieren.
 * a) $\{w\in \{a,b\}^* ||w|\leq 3\}$
+![Automat](Automat5a.png)
 * b) $\{w \in \{a,b\}^* | |w| \geq 3 \land \text{ das drittletzte Symbol in w ist ein a}\}$
+![Automat](Automat5b.png)
 * c) $\{w \in \{a, b\}^* | w \text{ enthaelt das Teilwort aa oder das Teilwort bb}\}$
+![Automat](Automat5c.png)
 
 ---
 
