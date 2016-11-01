@@ -37,7 +37,14 @@ $(\{a,b\})^* \neq \{a\}^* \{b\}^* $
 * b) $\forall L_1,L_2 : (L_1 =L_2 \Leftrightarrow L_1^* =L_2^* )$
 -> wahr
 * c) $\forall L_1, L_2 : L_1L_1^* L_2 \subseteq L_1^* L_2$
+-> falsch
+$L_1^{n+1}L_2\subseteq L_1^nL_2$ $n\in \mathbb{N}_0$
+Gegenbeispiel:
+$L_1=\{a\} L_2=\{b\}$
+$ab\subseteq b$
 * d) $\forall L_1, L_2 : L_1^* L_2 \subseteq L_1L_1^* L_2$
+-> wahr
+$L_1^{n}L_2\subseteq L_1^{n+1}L_2$ $n\in \mathbb{N}_0$
 
 ---
 
