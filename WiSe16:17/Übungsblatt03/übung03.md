@@ -76,6 +76,26 @@ $q_{ij}=(q_i,q_j): $
 ---
 
 ## 5. Geben Sie jeweils Zustandsdiagramme (nichtdeterministischer) endlicher Automaten an, die die folgenden Sprachen akzeptieren.
+
+Def. $NEA=(\{K,\Sigma , \Delta , s,F\})$
+* K ist endliche Menge an Zuständen
+* $\Sigma$ ist ein Alphabet
+* $s \in K$ ist der Startzustand
+* $\Delta$ ist die Überführungsfunktion
+* $F \subseteq K$ ist die Menge der Endzuständen
+
+Wir erlauben nun,
+* dass es keinen Nachfolgezustand für ein Symbol gibt
+* dass es mehr als einen Nachfolgezustand für ein Symbol gibt
+* dass es Übergänge gibt, ohne dass ein Symbol gelesen wird
+
+
+Die Klasse der von nichtdeterministischen endlichen Automaten akzeptierten Sprachen ist abgeschlossen unter
+* Vereinigung,
+* Konkatenation
+* Kleene-Star
+
+
 * a) $\{w\in \{a,b\}^* ||w|\leq 3\}$
 ![Automat](Automat5a.png)
 * b) $\{w \in \{a,b\}^* | |w| \geq 3 \land \text{ das drittletzte Symbol in w ist ein a}\}$
@@ -89,3 +109,19 @@ $q_{ij}=(q_i,q_j): $
 *Sie brauchen dabei nicht alle Zustände, die sich aus der Potenzmengenkonstruktion ergeben, zu konstruieren, sondern nur die vom Startzustand aus erreichbaren.*
 
 ![Automat01](Automat01.png)
+
+$NEA=(\{q_1,q_2,q_3\},\{a,b\},\Delta ,q_1,\{q_3\})$
+
+| $\Delta$ |   | a | b |
+| :------: | :---: | :---: | :---: |
+| $q_1$ |   | $\{q_1,q_2\}$ | $q_1$ |
+| $q_2$ |   | $q_3$ | $q_3$ |
+| $q_3$ |   | $\emptyset$ | $\emptyset$ |
+
+| $\Delta \rightarrow \delta$ |   | a | b |
+| :------: | :---: | :---: | :---: |
+| $q_1'$ |   | $q_2'$ | $q_1'$ |
+| $q_2'$ |   | $q_3'$ | $q_3'$ |
+| $q_3'$ |   | $q_3'$ | $q_3'$ |
+
+![Automat](Automat6.png)
