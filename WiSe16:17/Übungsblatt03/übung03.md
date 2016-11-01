@@ -3,6 +3,13 @@
 
 * a) $\forall L_1,L_2,L_3:(L_1 \cup L_2)L_3=L_1L_3\cup L_2L_3$
 -> wahr, Distributivität
+Konkatination: $L_1L_2=\{w \in \Sigma^* | x\in L_1 \land y\in L_2 \rightarrow w=yx\}$
+Vereinigung: $L_1 \cup L_2=\{w \in \Sigma^* | w\in L_1 \lor w\in L_2\}$
+$(L_1\cup L_2)L_3$
+$=\{w\in \Sigma^* | w_1\in \Sigma^* (w_1\in L_1 \lor w_1 \in L_2)\land w_2\in \Sigma^* (w_2 \in \Sigma^* )\rightarrow w=w_1w_2\}$
+$=\{w\in \Sigma^* | (w_1\in L_1 \land w_1\in L_3) \lor (w_1 \in L_2 \land w_2 \in L_3)\rightarrow w=w_1w_2\}$
+$=L_1L_3\cup L_2L_3$
+
 * b) $\forall L_1,L_2,L_3:(L_1\cap L_2)L_3=L_1L_3\cap L_2L_3$
 -> falsch
 Gegenbeispiel:
