@@ -37,14 +37,13 @@ $(\{a,b\})^* \neq \{a\}^* \{b\}^* $
 * b) $\forall L_1,L_2 : (L_1 =L_2 \Leftrightarrow L_1^* =L_2^* )$
 -> wahr
 * c) $\forall L_1, L_2 : L_1L_1^* L_2 \subseteq L_1^* L_2$
--> falsch
+-> richtig
 $L_1^{n+1}L_2\subseteq L_1^nL_2$ $n\in \mathbb{N}_0$
 Gegenbeispiel:
 $L_1=\{a\} L_2=\{b\}$
 $ab\subseteq b$
 * d) $\forall L_1, L_2 : L_1^* L_2 \subseteq L_1L_1^* L_2$
--> wahr
-$L_1^{n}L_2\subseteq L_1^{n+1}L_2$ $n\in \mathbb{N}_0$
+-> falsch
 
 ---
 
@@ -95,7 +94,7 @@ Def. $NEA=(\{K,\Sigma , \Delta , s,F\})$
 * K ist endliche Menge an Zuständen
 * $\Sigma$ ist ein Alphabet
 * $s \in K$ ist der Startzustand
-* $\Delta$ ist die Überführungsfunktion
+* $\Delta$ ist die Überführungsrelation
 * $F \subseteq K$ ist die Menge der Endzuständen
 
 Wir erlauben nun,
@@ -126,16 +125,21 @@ Die Klasse der von nichtdeterministischen endlichen Automaten akzeptierten Sprac
 
 $NEA=(\{q_1,q_2,q_3\},\{a,b\},\Delta ,q_1,\{q_3\})$
 
-| $\Delta$ |   | a | b |
-| :------: | :---: | :---: | :---: |
-| $q_1$ |   | $\{q_1,q_2\}$ | $q_1$ |
-| $q_2$ |   | $q_3$ | $q_3$ |
-| $q_3$ |   | $\emptyset$ | $\emptyset$ |
+1. Epsilonabschluss
+*Alle Zustände, die wir ohne Eingabe erreichen*
 
-| $\Delta \rightarrow \delta$ |   | a | b |
+| $q$ | $q_1$ | $q_2$ | $q_3$ |
 | :------: | :---: | :---: | :---: |
-| $q_1'$ |   | $q_2'$ | $q_1'$ |
-| $q_2'$ |   | $q_3'$ | $q_3'$ |
-| $q_3'$ |   | $q_3'$ | $q_3'$ |
+| $E(q)$ | $\{q_1\}$ | $\{q_2\}$ | $\{q_3\}$ |
 
-![Automat](Automat6.png)
+2. Übergangstabelle
+
+| $\delta$ |   | a | b |
+| :------: | :---: | :---: | :---: |
+| $\{q_1\}$ |   | $\{q_1,q_2\}$ | $\{q_1\}$ |
+| $\{q_2\}$ |   | $\{q_3\}$ | $\{q_3\}$ |
+| $\{q_3\}$ |   | $\emptyset$ | $\emptyset$ |
+| $\{q_1,q_2\}$ |   | $\{q_1,q_2,q_3\}$ | $\{q_1,q_3\}$ |
+| $\emptyset$ |   | $\emptyset$ | $\emptyset$ |
+| $\{q_1,q_2,q_3\}$ |   | $\{q_1,q_2,q_3\}$ | $\{q_1,q_3\}$ |
+| $\{q_1,q_3\}$ |   | $\{q_1,q_2\}$ | $\{q_1\}$ |
