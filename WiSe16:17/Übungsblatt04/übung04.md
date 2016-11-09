@@ -51,12 +51,12 @@ Def. regulärer Ausdruck: ist ein Ausdruck über $w \in (\Sigma \cup \{(,),\empt
 (2) $\emptyset \in RA$
 (3) $\alpha , \beta \in RA \Rightarrow (\alpha \beta) \in RA$
 (4) $\alpha \in RA \Rightarrow \alpha^* \in RA$
-(5) $\alpha,\beta \in RA \Rightarrow (\alpha \cup \beta)\in RA$ 
+(5) $\alpha,\beta \in RA \Rightarrow (\alpha \cup \beta)\in RA$
 
 * a) $\{w\in \Sigma ^* | w \text{ enthaelt hoechstens zwei a}\}$
 $L=(b^* (a\cup \varepsilon)b^* (a \cup \varepsilon) b^* )$
 * b) $\{w\in \Sigma ^* | w \text{ enthaelt geradzahlig viele a}\}$
-$L=((b^* ab^* ab^* )^* \cup b^* )$
+$L=((b^* ab^* a)^* \cup b^* )$
 * c) $\{w\in \Sigma ^* | w \text{ enthaelt das Teilwort ab}\}$
 $L=((a\cup b)^* ab(a\cup b)^* )$
 * d) $\{w\in \Sigma ^* | w \text{ enthaelt das Teilwort ab nicht}\}$
@@ -69,6 +69,7 @@ $L=(b^* a^* )$
 
 * a) $\{w\in \Sigma ^* | w \text{ enthaelt sowohl ab als auch ba als Teilwort}\}$
 $L=((a\cup b)^* abb^* a(a\cup b)^* \cup (a\cup b)^* baa^* b(a\cup b)^* )$
+oder $(a^* abb^* a(a\cup b)^* \cup b^* baa^* b(a\cup b)^* )$
 * b) $\{w\in \Sigma ^* | w \text{ enthaelt kein Teilwort bb}\}$
 $L=((a \cup ba)^* (b\cup \varepsilon))$
 * c) $\{w\in \Sigma ^* | \text{ in w stehen alle Teilwoerter aa vor allen Teilwoertern bb}\}$
