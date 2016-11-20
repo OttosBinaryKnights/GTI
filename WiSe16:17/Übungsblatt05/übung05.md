@@ -23,7 +23,8 @@ b) $\emptyset^* \cup aaa$
 
 * a) $L=\{w\in \{0,1\}^* | w \text{ ist die Binaerdarstellung einer durch feunf teilbaren Zahl}\}$
 * b) $L=\{xyx^R | x,y \in \{a,b\}^* \}$
-* c) $L=\{w \in \{a,b,c\}^* | \text{die Anzahl der Vorkommen con c in w ist eine Primzahl}\}$
+-> regulär (Blatt 5)
+* c) $L=\{w \in \{a,b,c\}^* | \text{die Anzahl der Vorkommen von c in w ist eine Primzahl}\}$
 
 ---
 

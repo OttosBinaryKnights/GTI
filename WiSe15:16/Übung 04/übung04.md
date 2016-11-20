@@ -226,4 +226,4 @@ $z=a^{n-k-1}bba^n$
 
 Dann wäre aber für $i=0$
 
-$w = xy^iz = xz=a^{n-l)bba^n \notin L$, da
+$w = xy^iz = xz=a^{n-l}bba^n \notin L$, da
