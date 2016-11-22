@@ -54,6 +54,11 @@ Eine Sprache $L$ heißt kontextfrei, falls es eine kontextfreie Grammatik $G$ gi
 Hinweis: Es sei $SF(G)$ die Menge der erzeugten Satzformen der Grammatik G, definiert durch $SF(G)=\{w \in (V \cup \Sigma )^* |S\Rightarrow_G^* w\}$.
 Beweisen Sie zunächst für alle Wörter $w$ in $SF(G)$ (durch vollständige Induktion über die Ableitungslänge), dass $|w|a + |w|A = |w|b + |w|B$ gilt.
 
+Seien $\Sigma$ und $\Gamma$ Alphabete.
+Eine Funktion $h:\Sigma^* \rightarrow \Gamma^* $ mit
+$$h(uv)=h(u)h(v)$$
+für alle $u,v\in \Sigma^* $ heißt Homomorphismus.
+
 ![Bild1](Lösung4b1.jpg)
 ![Bild1](Lösung4b2.jpg)
 
@@ -62,13 +67,13 @@ Beweisen Sie zunächst für alle Wörter $w$ in $SF(G)$ (durch vollständige Ind
 ## 5. Beweisen Sie, dass die folgenden Sprachen kontextfrei sind, indem Sie jeweils eine kontextfreie Grammatik angeben, die die Sprache erzeugt.
 * a) $L=\{a^nb^nc^m |n\geq 1, m\geq 3\}$
 $G=(\{S,A,B,C\},\{a,b,c\},R,S)$
-$R=\{S\rightarrow ABCCC,A\rightarrow aAB|a, B\rightarrow b, C\rightarrow c|cC\}$
+$R=\{S\rightarrow ABCCC,A\rightarrow aAb|a, B\rightarrow b, C\rightarrow c|cC\}$
 * b) $L=\{a^mb^n |m\geq n\}$
 $G=(\{S,A,B\},\{a,b\},R,S)$
-$R=\{S\rightarrow aAB,A\rightarrow aAB|a,B\rightarrow b|\varepsilon\}$
+$R=\{S\rightarrow AB|\varepsilon ,A\rightarrow aAB|aA|a ,B\rightarrow b\}$
 * c) $L=\{w\in \{a,b\}^* | w=w^R\}$
 $G=(\{S\},\{a,b\},R,S)$
-$R=\{S\rightarrow aSa|bSb|\varepsilon\}$
+$R=\{S\rightarrow aSa|bSb|\varepsilon |a|b \}$ (Palindrom)
 
 ## 6. Es sei $G = (\{S, A, B\}, \{a, b\}, R, S)$ eine kontextfreie Grammatik mit $R=\{S\rightarrow SS|aA|B|ab, A\rightarrow bS, B\rightarrow abS\}$ .
 
