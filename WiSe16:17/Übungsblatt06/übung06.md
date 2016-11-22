@@ -10,7 +10,7 @@
 
 ## 3.
 Def.:
-Eine Grammatik $G=(V,\Sigma ,R,S)$ heißt rechtslinear, falls alle Regeln in $R$ von der Form $A\rightarrow \sigma B$ oder $A\rightarrow \varepsilon$ sind mit $A,B\in V$ und $\sigma \in \Sigma$.
+Eine Grammatik $G=(V,\Sigma ,R,S)$ heißt rechtslinear, falls alle Regeln in $R$ von der Form $A\rightarrow \sigma B$ ($\sigma$: Terminal; B: Nichtterminal) oder $A\rightarrow \varepsilon$ sind mit $A,B\in V$ und $\sigma \in \Sigma$.
 
 Eine Grammatik $G=(V,\Sigma ,R,S)$ heißt linkslinear, falls alle Regeln in R von der Form $A\rightarrow B\sigma$ oder $A\rightarrow \varepsilon$ sind mit $A,B\in V$ und $\sigma \in \Sigma$.
 
@@ -41,18 +41,21 @@ Eine Sprache $L$ heißt kontextfrei, falls es eine kontextfreie Grammatik $G$ gi
 
 * a) Beweisen Sie, dass ababbaaabb zu $L(G)$ gehört.
 
-| S | $\rightarrow$ | aB |
+| S | $\Rightarrow_G$ | aB |
 | --- | --- | --- |
-| | $\rightarrow$ | aABB |
-| | $\rightarrow$ | aBAABB |
-| | $\rightarrow$ | abaBAABB |
-| | $\rightarrow$ | ababSAABB |
-| | $\rightarrow$ | ababbAAABB |
-| | $\rightarrow$ | ababbaaabb |
+| | $\Rightarrow_G$ | aABB |
+| | $\Rightarrow_G$ | aBAABB |
+| | $\Rightarrow_G$ | abaBAABB |
+| | $\Rightarrow_G$ | ababSAABB |
+| | $\Rightarrow_G$ | ababbAAABB |
+| | $\Rightarrow_G$ | ababbaaabb |
 
 * b) Beweisen Sie, dass alle Wörter in $L(G)$ gleich viele a und b enthalten.
 Hinweis: Es sei $SF(G)$ die Menge der erzeugten Satzformen der Grammatik G, definiert durch $SF(G)=\{w \in (V \cup \Sigma )^* |S\Rightarrow_G^* w\}$.
 Beweisen Sie zunächst für alle Wörter $w$ in $SF(G)$ (durch vollständige Induktion über die Ableitungslänge), dass $|w|a + |w|A = |w|b + |w|B$ gilt.
+
+![Bild1](Lösung4b1.jpg)
+![Bild1](Lösung4b2.jpg)
 
 ---
 
@@ -64,7 +67,7 @@ $R=\{S\rightarrow ABCCC,A\rightarrow aAB|a, B\rightarrow b, C\rightarrow c|cC\}$
 $G=(\{S,A,B\},\{a,b\},R,S)$
 $R=\{S\rightarrow aAB,A\rightarrow aAB|a,B\rightarrow b|\varepsilon\}$
 * c) $L=\{w\in \{a,b\}^* | w=w^R\}$
-$G=(\{S,A,B,C\},\{a,b\},R,S)$
+$G=(\{S\},\{a,b\},R,S)$
 $R=\{S\rightarrow aSa|bSb|\varepsilon\}$
 
 ## 6. Es sei $G = (\{S, A, B\}, \{a, b\}, R, S)$ eine kontextfreie Grammatik mit $R=\{S\rightarrow SS|aA|B|ab, A\rightarrow bS, B\rightarrow abS\}$ .
