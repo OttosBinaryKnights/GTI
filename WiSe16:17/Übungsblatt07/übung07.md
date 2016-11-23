@@ -1,7 +1,11 @@
 # Übungsblatt 07
 ## 1. Beweisen Sie, dass die folgenden Sprachen kontextfrei sind, indem Sie jeweils eine kontextfreie Grammatik angeben, die die Sprache erzeugt.
 * __a) $L=\{aubw|u,w\in \{a,b\}^* , |u|=|w|\}$__
+$G=(\{S,B\},\{a,b\}, R,S)$
+$R=\{S \rightarrow aB, B \rightarrow b|aBa|bBb|aBb|bBa\}$
 * __b) $L=\{x^R\#y|x,y\in \{0,1\}^* , \text{x ist Teilwort von y}\}$__
+$G=(\{S,B\},\{0,1\}, R,S)$
+$R=\{S\rightarrow 0X0|1X1Y|X,X\rightarrow 0X0|1X1|\#Y,Y\rightarrow0Y|1Y|\varepsilon\}$
 
 ---
 

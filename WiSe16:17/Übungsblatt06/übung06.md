@@ -1,6 +1,8 @@
 # Übungsblatt 06
 ## 1. Es sei M ein deterministischer endlicher Automat mit n Zuständen. Zeigen Sie: Wenn M ein Wort der Länge n akzeptiert, dann ist die von M akzeptierte Sprache unendlich.
 
+
+
 ---
 
 ## 2. Es sei $\Sigma$ ein Alphabet. Beweisen Sie, dass die Sprache der regulären Ausdrücke über $\Sigma$ nicht regulär ist.
