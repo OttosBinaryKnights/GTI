@@ -4,7 +4,7 @@
 $G=(\{S,B\},\{a,b\}, R,S)$
 $R=\{S \rightarrow aB, B \rightarrow b|aBa|bBb|aBb|bBa\}$
 * __b) $L=\{x^R\#y|x,y\in \{0,1\}^* , \text{x ist Teilwort von y}\}$__
-$G=(\{S,B\},\{0,1\}, R,S)$
+$G=(\{S,B\},\{0,1,\#\}, R,S)$
 $R=\{S\rightarrow 0X0|1X1Y|X,X\rightarrow 0X0|1X1|\#Y,Y\rightarrow0Y|1Y|\varepsilon\}$
 
 ---
@@ -29,24 +29,65 @@ $C\rightarrow cC|\varepsilon$__
 __Konstruieren Sie – gemäß des in der Vorlesung angegebenen Algorithmus – eine zu $G$ äquivalente $G'$ in Chomsky-Normalform.__
 
 1) Elimination des Startsymbols auf rechten Seiten
-$G=(\{S',S,A,B,C\},\{a,b,c\},R,S')$
+$G_1=(\{S',S,A,B,C\},\{a,b,c\},R_1,S')$
 $S'\rightarrow ASA|ACA$
 $S\rightarrow ASA|ACA$
 $A\rightarrow aAa|B|C$
 $B\rightarrow bB|A|b$
 $C\rightarrow cC|\varepsilon$
+
 2) Elimination von ε-Regeln
-$G=(\{S',S,A,B,C\},\{a,b,c\},R,S')$
+Allgemein: $V_{\varepsilon}=\{A\in V|A\Rightarrow_G^* \varepsilon\}$
+$G_2=(\{S',S,A,B,C\},\{a,b,c\},R_2,S')$
 $S'\rightarrow \varepsilon$
-$S'\rightarrow ASA|ACA$
-$S\rightarrow ASA|ACA$
-$A\rightarrow aAa|B|C$
+$S'\rightarrow ASA|ACA|AA|AS|SA|AC|CA|A|S|C$
+$S\rightarrow ASA|ACA|AA|AS|SA|AC|CA|A|S|C$
+$A\rightarrow aAa|B|C|aa$
 $B\rightarrow bB|A|b$
-$C\rightarrow cC$
+$C\rightarrow cC|c$
+
 3) Elimination von Kettenregelzyklen
+Zyklen: $S\rightarrow S, A\rightarrow B\rightarrow A$
+Ersetzen aller Vorkommen von S zu $S_1$ und alle Vorkommen von A und B durch $A_1$
+$G_3=(\{S',S_1,A_1,C\},\{a,b,c\},R_3,S')$
+$S'\rightarrow \varepsilon$
+$S'\rightarrow A_1S_1A_1|A_1CA_1|A_1A_1|A_1S_1|S_1A_1|A_1C|CA_1|A_1|S_1|C$
+$S_1\rightarrow A_1S_1A_1|A_1CA_1|A_1A_1|A_1S_1|S_1A_1|A_1C|CA_1|A_1|C$
+$A_1\rightarrow aA_1a|C|aa$
+$A_1\rightarrow bA_1|b$
+$C\rightarrow cC|c$
+
 4) Elimination von Kettenregeln
+$G_3=(\{S',S_1,A_1,C\},\{a,b,c\},R_3,S')$
+$S'\rightarrow \varepsilon$
+$S'\rightarrow A_1S_1A_1|A_1CA_1|A_1A_1|A_1S_1|S_1A_1|A_1C|CA_1|A_1|S_1|C$
+$S_1\rightarrow A_1S_1A_1|A_1CA_1|A_1A_1|A_1S_1|S_1A_1|A_1C|CA_1|A_1|C$
+$A_1\rightarrow aA_1a|C|aa$
+$A_1\rightarrow bA_1|b$
+$C\rightarrow cC|c$
+
 5) Elimination von nichtisolierten Terminalsymbolen auf rechten Seiten
+$G_3=(\{S',S_1,A_1,C,T_a\},\{a,b,c\},R_3,S')$
+$S'\rightarrow \varepsilon$
+$S'\rightarrow A_1S_1A_1|A_1CA_1|A_1A_1|A_1S_1|S_1A_1|A_1C|CA_1|A_1|S_1|C$
+$S_1\rightarrow A_1S_1A_1|A_1CA_1|A_1A_1|A_1S_1|S_1A_1|A_1C|CA_1|A_1|C$
+$A_1\rightarrow T_aA_1T_a|C|T_aT_a$
+$A_1\rightarrow bA_1|b$
+$C\rightarrow cC|c$
+$T_a\rightarrow a$
+
 6) Elimination von langen rechten Seiten
+$G_3=(\{S',S_1,A_1,C,T_a,D_1,D_2,D_3\},\{a,b,c\},R_3,S')$
+$S'\rightarrow \varepsilon$
+$S'\rightarrow A_1D_1|A_1D_2|A_1A_1|A_1S_1|S_1A_1|A_1C|CA_1|A_1|S_1|C$
+$S_1\rightarrow A_1D_1|A_1D_2|A_1A_1|A_1S_1|S_1A_1|A_1C|CA_1|A_1|C$
+$A_1\rightarrow T_aD_3|C|T_aT_a$
+$A_1\rightarrow bA_1|b$
+$C\rightarrow cC|c$
+$T_a\rightarrow a$
+$D_1\rightarrow S_1A_1$
+$D_2\rightarrow CA_1$
+$D_3\rightarrow A_1T_a$
 
 ---
 
