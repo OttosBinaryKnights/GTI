@@ -93,6 +93,8 @@ $D_3\rightarrow A_1T_a$
 
 ## 4. Es sei $G=(\{S,A,B,C\},\{a,b\},R,S)$ mit $R=\{S\rightarrow AB|BC, A\rightarrow BA|a, B\rightarrow CC|b, C\rightarrow AB|a\}$ eine kontexfreie Grammatik in Chomsky Normalform. Bestimmen Sie mit Hilfe des in der Vorlesung angegebenen Algorithmus von Cocke, Younger und Kasami, ob das Wort baaba zu $L(G)$ gehört sowie welche Präfixe von baaba von $G$ erzeugt werden und welche nicht.
 
+CYK-Algorithmus löst das Wortproblem für kontextfreie Spraachen, die durch eine kontextfreie Grammatik in Chomsky Normalform gegeben sind.
+
 $w=baaba$
 
 $\begin{matrix}
