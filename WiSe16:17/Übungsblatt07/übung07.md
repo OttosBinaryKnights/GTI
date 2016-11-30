@@ -17,6 +17,11 @@ $S\rightarrow \varepsilon$
 $A\rightarrow a$ für ein a aus $\Sigma$
 $A\rightarrow BC$ für $B,C\in V-\{S\}$
 
+__Aufgabe: Algorithmus zur Suche von Nichtterminalen in einem oder mehrere Ableitungen__
+1. $\forall A\in V\cap V_\varepsilon$ suche nach Regeln  $A\rightarrow \varepsilon$ --> $V_\varepsilon =V_\varepsilon \cup \{A\}$
+2. Ersetze alle Vorkommen von A in V durch $\varepsilon$
+3. wiederhole 1 und 2 bis nichts ersetzt wurde
+
 ---
 
 ## 3. Gegeben ist die kontextfreie Grammatik $G=(\{S,A,B,C\},\{a,b,c\},R,S)$ mit folgenden Regeln in R:
