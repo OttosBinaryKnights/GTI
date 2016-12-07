@@ -43,6 +43,7 @@ $C\rightarrow cC|\varepsilon$
 
 2) Elimination von ε-Regeln
 Allgemein: $V_{\varepsilon}=\{A\in V|A\Rightarrow_G^* \varepsilon\}$
+$V_\varepsilon=\{S',S,A,B,C\}$
 $G_2=(\{S',S,A,B,C\},\{a,b,c\},R_2,S')$
 $S'\rightarrow \varepsilon$
 $S'\rightarrow ASA|ACA|AA|AS|SA|AC|CA|A|S|C$
@@ -63,7 +64,7 @@ $A_1\rightarrow bA_1|b$
 $C\rightarrow cC|c$
 
 4) Elimination von Kettenregeln
-$G_3=(\{S',S_1,A_1,C\},\{a,b,c\},R_3,S')$
+$G_4=(\{S',S_1,A_1,C\},\{a,b,c\},R_4,S')$
 $S'\rightarrow \varepsilon$
 $S'\rightarrow A_1S_1A_1|A_1CA_1|A_1A_1|A_1S_1|S_1A_1|A_1C|CA_1|A_1|S_1|C$
 $S_1\rightarrow A_1S_1A_1|A_1CA_1|A_1A_1|A_1S_1|S_1A_1|A_1C|CA_1|A_1|C$
@@ -72,7 +73,7 @@ $A_1\rightarrow bA_1|b$
 $C\rightarrow cC|c$
 
 5) Elimination von nichtisolierten Terminalsymbolen auf rechten Seiten
-$G_3=(\{S',S_1,A_1,C,T_a\},\{a,b,c\},R_3,S')$
+$G_5=(\{S',S_1,A_1,C,T_a\},\{a,b,c\},R_5,S')$
 $S'\rightarrow \varepsilon$
 $S'\rightarrow A_1S_1A_1|A_1CA_1|A_1A_1|A_1S_1|S_1A_1|A_1C|CA_1|A_1|S_1|C$
 $S_1\rightarrow A_1S_1A_1|A_1CA_1|A_1A_1|A_1S_1|S_1A_1|A_1C|CA_1|A_1|C$
@@ -82,7 +83,7 @@ $C\rightarrow cC|c$
 $T_a\rightarrow a$
 
 6) Elimination von langen rechten Seiten
-$G_3=(\{S',S_1,A_1,C,T_a,D_1,D_2,D_3\},\{a,b,c\},R_3,S')$
+$G_6=(\{S',S_1,A_1,C,T_a,D_1,D_2,D_3\},\{a,b,c\},R_6,S')$
 $S'\rightarrow \varepsilon$
 $S'\rightarrow A_1D_1|A_1D_2|A_1A_1|A_1S_1|S_1A_1|A_1C|CA_1|A_1|S_1|C$
 $S_1\rightarrow A_1D_1|A_1D_2|A_1A_1|A_1S_1|S_1A_1|A_1C|CA_1|A_1|C$
@@ -153,7 +154,7 @@ $\Rightarrow \begin{matrix}
 $S\in N[1,5] \rightarrow w \in L(G)$
 
 **Welche Präfixe von baaba gehören zu L(G)?**
-* überall wo S in der ersten Zeile Steht: nur ba
+* überall wo S in der ersten Zeile Steht: nur $ba$
 
 ---
 
